@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(/jobdelas-redesocial/front-end/image/Backimg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom left;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-formulario {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-right: 160px;
+   margin-top: 80px;
+   width: 500px;
+   height: 650px;
+   border-radius: 35px;
+   background-color: #fff;
+   border: 1px solid #B378FF;
+}   
+
+.cabecalho-fomulario {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.main-formulario {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+
+.form-label { 
+    color: #706273;
+    font-size: 18px
+}
+
+.link-referencia {
+    text-decoration: none;
+    color: #706273;
+}
