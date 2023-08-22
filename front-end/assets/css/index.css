@@ -5,13 +5,14 @@
 }
 
 body {
-    background-image: url(/jobdelas-redesocial/front-end/image/Backimg.svg);
+    background-image: url(../image/Backimg.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: bottom left;
     display: flex;
     justify-content: flex-end;
+
 }
 
 .container-formulario {
