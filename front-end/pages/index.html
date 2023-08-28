@@ -3,9 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/front-end/assets/css/style.css">
+    <title>Job Delas - Home </title>
+    
+
 </head>
 <body>
+    <header>
+            <nav class="menu">
+                <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Perfil</a></li>
+                        <li><a href="#">Amigos</a></li>
+                        <li><a href="#">Configurações</a></li>
+                 </ul>
+            </nav>
+            <div class="logo"> <h1> JOBDELAS </h1></div>
+
+            <div class="search-user">
+                    <input type="text" placeholder="Pesquisar">
+                    <img src="/front-end/assets/image/fotoUsuario.png" alt="User">
+            </div>
+    </header>
+    <main>
+        <section class= "lateral">
+            <nav>
+                <h3> Explorar </h3>
+                <ul>
+                    <li> Notificações</li>
+                    <li> Mensagens </li>
+                    <li> Cursos </li>
+                    <li> Vagas </li>
+            </ul>   
+            </nav>
+            <section class="compromissos">
+                <h3>Compromissos </h3>
+                <table class="agenda"> 
+                    <tr>
+                      <th> Domingo </th>
+                      <th> Livre </th>
+                    </tr>
+                    <tr> 
+                        <th>Segunda</th>
+                        <th> Boticario </th>
+                    </tr>
+                    <tr>
+                        <th>Domingo</th>
+                        <th> Livre </th>
+                      </tr>
+                      <tr> 
+                          <th>Terça</th>
+                          <th> Livre </th>
+                      </tr>
+                      <tr>
+                        <th>Quarta</th>
+                        <th> Livre </th>
+                      </tr>
+                      <tr> 
+                          <th>Quinta</th>
+                          <th> Boticario </th>
+                      </tr>
+                      <tr>
+                        <th>Sexta</th>
+                        <th> Livre </th>
+                      </tr>
+                      <tr> 
+                          <th>Sabado</th>
+                          <th> Livre  </th>
+                      </tr>
+                
+                </table>
+            </section>
+            <section class="tarefas"> 
+                <h3> Lista de Tarefas </h3>
+                <section class="adicionarTarefa">
+                    <input>  </input>
+                    <button> Adicionar </button>
+                </section>        
     
+            </section>
+
+           
+        </section>
+        <section class="container-principal">
+            <div class="post-container">
+                <div class="user-info">
+                    <img src="/front-end/assets/image/fotoUsuario.png" alt="User">
+                    <h4> Maria Dourado </h4>
+                </div>
+                <textarea placeholder="O que você está pensando?"></textarea>
+                <button>Postar</button>
+            </div>
+            <div class="feed">
+                <div class="post">
+                    <div class="user-info">
+                        <img src="/front-end/assets/image/fotoUsuario.png" alt="User">
+                        <h4> Nome Usuario </h4>
+                    </div>
+                    <p class="post-date">Publicado em 25 de Agosto de 2023</p>
+                    <p class="post-content"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus saepe ea pariatur, ad quidem vitae obcaecati rem quisquam quis iste sint minus. Explicabo libero alias, aperiam eaque aspernatur doloribus minima! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat iure aliquid culpa enim voluptates porro, ipsam sint magni cum id libero soluta expedita, odit molestias cupiditate consequatur sunt laboriosam? Sunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem tenetur sit ullam fugit quam aspernatur aut ipsam impedit id pariatur, numquam fuga minus. Facere ex doloremque maiores ipsam facilis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor euismod turpis eget volutpat.</p>
+                    <div class="post-actions">
+                        <button class="like-button">Curtir</button>
+                        <button class="share-button">Compartilhar</button>
+                        <button class="comment-button">Comentar</button>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="user-info">
+                        <img src="/front-end/assets/image/fotoUsuario.png" alt="User">
+                        <h4> Nome Usuario </h4>
+                    </div>
+                    <p class="post-date">Publicado em 25 de Agosto de 2023</p>
+                    <p class="post-content"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus saepe ea pariatur, ad quidem vitae obcaecati rem quisquam quis iste sint minus. Explicabo libero alias, aperiam eaque aspernatur doloribus minima! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat iure aliquid culpa enim voluptates porro, ipsam sint magni cum id libero soluta expedita, odit molestias cupiditate consequatur sunt laboriosam? Sunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem tenetur sit ullam fugit quam aspernatur aut ipsam impedit id pariatur, numquam fuga minus. Facere ex doloremque maiores ipsam facilis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor euismod turpis eget volutpat.</p>
+                    <div class="post-actions">
+                        <button class="like-button">Curtir</button>
+                        <button class="share-button">Compartilhar</button>
+                        <button class="comment-button">Comentar</button>
+                    </div>
+                </div>
+                </div>
+
+    
+        </section>
+
+            
+
+    </main>
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
 </html>

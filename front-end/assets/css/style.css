@@ -1,1 +1,186 @@
-/* AQUI VAMOS TER AS CONFIGURAÇÕES PADRÕES QUE SEMPRE SE COMUNICAM, QUE SÃO FONTES E CORES */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(255, 241, 255);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: fixed;
+    background-color:  #B378FF;
+    color: white;
+    padding: .5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap:25px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.search-user {
+    display: flex;
+}
+
+.search-user input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-user img , .user-info img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+/* PRINCIPAL  */
+main {
+    margin-top: 80px; 
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap:40px;
+    padding: 20px;
+}
+
+.container-principal {
+    width: 80%;
+    margin: 0 auto; 
+}
+
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #B378FF;
+    background: #FFF;
+    resize: vertical;
+}
+
+.post-container .user-info {
+    display: flex;
+    align-items: center;
+    gap:.5rem;
+}
+
+.post-container button, .adicionarTarefa button {
+    margin-top: 10px;
+    width: 100px;
+    background-color:#B378FF;
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.feed {
+    margin-top: 1rem;
+    padding-bottom: 3rem;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+ 
+/* MENU LATERAL */
+.lateral {
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 1px solid  #B378FF;
+    width: 250px;
+    box-shadow: 0 0 5px rgba(181, 20, 255, 0.2);
+  }
+  
+  .lateral h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .lateral ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .agenda {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .agenda th {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+  }
+  
+/* tarefas */
+
+.tarefas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+}
+
+.adicionarTarefa {
+    margin-top: 20px;
+  }
+  
+.adicionarTarefa input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #B378FF;
+    border-radius: 4px;
+    font-size: 14px;
+}
+  
+
+ 
+
+/* POST */
+  .post {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.post-date {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.post-content {
+    margin: 10px 0;
+}
+  
+.post-actions button {
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+h4 {
+    color: #9c51ff;
+}
