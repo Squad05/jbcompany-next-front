@@ -12,6 +12,7 @@ body {
     background-position: bottom left;
     display: flex;
     justify-content: flex-end;
+    overflow: hidden;
 
 }
 
@@ -33,6 +34,10 @@ body {
     margin-top: 20px;
 }
 
+.cabecalho-fomulario p {
+    font-size: 23px;
+    font-weight: 500;
+}
 
 .main-formulario {
     width: 70%;
@@ -49,4 +54,53 @@ body {
 .link-referencia {
     text-decoration: none;
     color: #706273;
+}
+
+.main-container-about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.btn-login {
+    background-color: #fff;
+    color: #B378FF;
+    width: 100px;
+    margin: 15px;
+}
+
+.section-about {
+    display: flex;
+    margin-top: 70px;
+    gap: 50px;
+}
+
+.conteudo-escrito {
+    color: #fff;
+    font-weight: 700;
+}
+
+.conteudo-escrito-paragrafo {
+    color: #fff;
+    font-size: 22px;
+    margin-top: 0;
+    font-style: italic;
+}
+
+.titulo-info {
+    color: #fff;
+}
+
+.paragrafo-info {
+    color: #fff;
+    font-style: italic;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+    .container-formulario {
+        overflow: auto;
+    }
 }
