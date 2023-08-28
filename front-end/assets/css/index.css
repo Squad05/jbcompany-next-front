@@ -5,13 +5,14 @@
 }
 
 body {
-    background-image: url(/jobdelas-redesocial/front-end/image/Backimg.svg);
+    background-image: url(../image/Backimg.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: bottom left;
     display: flex;
     justify-content: flex-end;
+    overflow: hidden;
 }
 
 .container-formulario {
@@ -39,6 +40,11 @@ body {
     margin-bottom: 80px;
 }
 
+.paragrafo-form {
+    font-size: 23px;
+    font-weight: 500;
+}
+
 
 .form-label { 
     color: #706273;
@@ -48,4 +54,48 @@ body {
 .link-referencia {
     text-decoration: none;
     color: #706273;
+}
+
+.btn-login {
+    background-color: #fff;
+    color: #B378FF;
+    width: 100px;
+    margin: 15px;
+}
+
+.section-about {
+    display: flex;
+    margin-top: 70px;
+    gap: 50px;
+
+}
+
+.conteudo-escrito  {
+    color: #fff;
+    font-weight: 700;
+}
+
+.conteudo-escrito-paragrafo {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+
+.titulo-info {
+    color: #fff;
+}
+
+.paragrafo-info {
+    color: #fff;
+    font-style: italic;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+    .container-formulario {
+        overflow: auto;
+    }
 }
