@@ -59,7 +59,9 @@ a:hover {
 .link-referencia {
     text-align: center;
 }
-
+.img-formulario {
+    display: none;
+}
 
 .main-container-about {
     display: flex;
@@ -157,6 +159,55 @@ p {
     }
     .container-formulario {
         width: 80%;
-        height: 92%;      
-     }   
+        height: 92%;
+    }
+    .img-formulario {
+        display: block;
+        width: 195px;
+    }
 }
+
+@media screen and (max-height: 600px) {
+    .img-formulario {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 555px), screen and (max-width: 300px) {
+    .container-formulario {
+        width: 95%;
+        height: 90%;
+        margin: 10px;
+        border-radius: 15px;
+    }
+
+@media screen and (max-width: 300px) {
+    body {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+    }
+    .container-formulario {
+            height: 55%;
+            margin: 10px;
+    }
+    .container-formulario p {
+            display: none;
+    }
+    .img-formulario,
+    .logincmGmail {
+            display: none;
+        }
+    form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+    }
+    .link-cadastre-se {
+            position: absolute;
+            bottom: 0;
+    }
+    }
+}
+
