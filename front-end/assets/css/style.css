@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow:hidden ;  
 }
 
 body {
@@ -11,50 +12,54 @@ body {
     background-attachment: fixed;
     background-position: bottom left;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; 
+    align-items: center;
+    height: 100vh; 
     overflow: hidden;
+
 
 }
 
 .container-formulario {
    display: flex;
    flex-direction: column;
-   gap: 10px;
-   margin-right: 160px;
-   margin-top: 80px;
-   width: 500px;
-   height: 650px;
+   justify-content: space-evenly;
+   align-items: center;
+   width: 400px;
+   height: 550px;
    border-radius: 35px;
    background-color: #fff;
    border: 1px solid #B378FF;
+   margin: 2rem;
+
+
 }   
 
 .cabecalho-fomulario {
     text-align: center;
-    margin-top: 20px;
 }
 
 .cabecalho-fomulario p {
-    font-size: 23px;
+    font-size: 1rem;
     font-weight: 500;
 }
 
 .main-formulario {
-    width: 70%;
-    margin: auto;
-    margin-bottom: 80px;
+    width: 80%;
 }
 
-
-.form-label { 
-    color: #706273;
-    font-size: 18px
-}
-
-.link-referencia {
+.form-label, .link-referencia, a { 
     text-decoration: none;
     color: #706273;
 }
+
+a:hover {
+    color: #B378FF;
+}
+.link-referencia {
+    text-align: center;
+}
+
 
 .main-container-about {
     display: flex;
@@ -99,8 +104,59 @@ body {
     font-weight: 600;
 }
 
-@media screen and (max-width: 800px) {
-    .container-formulario {
-        overflow: auto;
+.main-formulario input {
+    border: 1px solid #B378FF; 
+    border-radius: 15px; 
+    height: 45px;
+}
+
+.main-formulario input:focus {
+    border: 1px solid #B378FF; 
+    box-shadow: none;
+    background-color: #faf2ff ;
+}
+
+#botao-formulario {
+    width: 200px;
+    color: #B378FF;
+    border: 1px solid #B378FF ;
+    
+   
+}
+
+#botao-formulario:hover {
+    background-color: #B378FF;
+    color: white;
+}
+.col-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.link-esqueceuSenha {
+    bottom: 0;
+}
+
+
+.container-botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    text-align: center; 
+    color: #B378FF;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        display: flex;
+        justify-content: center;
     }
+    .container-formulario {
+        width: 80%;
+        height: 92%;      
+     }   
 }

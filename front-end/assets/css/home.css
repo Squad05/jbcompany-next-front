@@ -1,6 +1,9 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Inter', sans-serif;
+
+
 }
 
 body {
@@ -42,28 +45,39 @@ a {
     border-radius: 50%;
     margin-left: 10px;
 }
-
+.user-info {
+    display: flex;
+}
 main {
     margin-top: 80px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 40px;
     padding: 20px;
 }
 
 .container-principal {
+    flex: 1;
     width: 80%;
-    margin: 0 auto;
+    margin-left: 290px;
+    overflow-x: hidden;
+
+
+
 }
 
 .post-container {
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 15px;
+    /* border-radius: 10px; */
     border: 1px solid #B378FF;
     background: #FFF;
     resize: vertical;
+    justify-content:space-between ;
+}
+textarea {
+   height: 150px;
 }
 
 .post-container button, .adicionarTarefa button {
@@ -91,6 +105,10 @@ main {
     border-right: 1px solid #B378FF;
     width: 250px;
     box-shadow: 0 0 5px rgba(181, 20, 255, 0.2);
+    position: fixed;
+    height: auto;
+
+
 }
 
 .lateral h3 {
@@ -113,7 +131,7 @@ main {
 .tarefas, .adicionarTarefa {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .adicionarTarefa input {
