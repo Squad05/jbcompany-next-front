@@ -31,7 +31,7 @@
 
 [Guilherme Augusto Pinto](#)
 
-[Hellen dos Santos Ferreira](#)
+[Hellen dos Santos Ferreira](https://github.com/HellenS95)
 
 [Jeferson Ribeiro da Silva](https://github.com/1Jeferson)
 
