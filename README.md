@@ -27,7 +27,7 @@
 
 [Guilherme B. de Oliveira](https://github.com/guidev1989)
 
-[Grasielly Dias Apolinário](#)
+[Grasielly Dias Apolinário](https://github.com/Grasielly84)
 
 [Guilherme Augusto Pinto](#)
 
