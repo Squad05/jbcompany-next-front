@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+ 
 }
 
 body {
@@ -60,7 +61,68 @@ a:hover {
 .img-formulario {
     display: none;
 }
+.cabecalho-about {
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.cabecalho-about h2 {
+    margin-left: 50px;
+}
+.cabecalho-about a {
+    margin-right: 50px;
+    border-radius: 15px;
+    border: 1px solid #faf2ff;
+    padding: 10px 25px 10px 25px;
+    color:white
+}
 
+/* SOBRE */
+.container-about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.container-about h1, .container-about h2 {
+    color: #fff;
+    font-weight: 700;
+}
+
+.container-about p {
+    color: #fff;
+    font-size: 22px;
+    font-style: italic;
+}
+
+#botao-conectar{
+    width: 250px ;
+    height: 45px; 
+    font-size: 18px; 
+    border-radius: 17px;
+    color: #fff;
+    border: 1px solid #fff ;
+}
+
+#botao-conectar:hover{
+    background-color: #faf2ff ;
+    color: #B378FF ;
+}
+
+
+.btn-login {
+    background-color: #fff;
+    color: #B378FF;
+    width: 100px;
+    margin: 15px;
+}
+
+.section-about {
+    display: flex;
+    margin-top: 70px;
+    gap: 50px;
+}
 
 
 
@@ -89,14 +151,12 @@ a:hover {
     background-color: #B378FF;
     color: white;
 }
-
 .col-12 {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
-
 .link-esqueceuSenha {
     bottom: 0;
 }
@@ -125,7 +185,7 @@ a:hover {
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 760px) {
     body {
         display: flex;
         justify-content: center;
@@ -140,7 +200,24 @@ a:hover {
     }
 }
 
+@media screen  and (max-width: 720px) {
+   * {
+        overflow:visible ; 
+    }
+    .section-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .section-about div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
 
 @media screen and (max-height: 700px) {
     .img-formulario {
@@ -165,7 +242,7 @@ a:hover {
     }
 
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 200px) {
     body {
             display: flex;
             justify-content: center;
