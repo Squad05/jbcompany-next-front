@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(../image/background-about.svg); 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-position: left;
+}
+
+div img {
+    height: 80px;
+}
+
+.cabecalho-about {
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 22px;
+}
+.cabecalho-about h2 {
+    margin-left: 50px;
+}
+.cabecalho-about a {
+    margin-right: 50px;
+    border-radius: 15px;
+    border: 1px solid #faf2ff;
+    padding: 10px 25px 10px 25px;
+    color:white;
+    text-decoration: none;
+}
+
+.cabecalho-about a:hover {
+   background-color:#faf2ff ;
+   color: #B378FF ;
+}
+
+.container-about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.container-about h1, .container-about h2 {
+    color: #fff;
+    font-weight: 700;
+}
+
+.container-about p {
+    color: #fff;
+    font-size: 22px;
+    font-style: italic;
+}
+
+#botao-conectar{
+    width: 250px ;
+    height: 45px; 
+    font-size: 18px; 
+    border-radius: 17px;
+    color: #fff;
+    border: 1px solid #fff ;
+}
+
+#botao-conectar:hover{
+    background-color: #faf2ff ;
+    color: #B378FF ;
+}
+
+.section-about {
+    display: flex;
+    margin-top: 70px;
+    gap: 50px;
+}
+
+
+@media screen  and (max-width: 720px) {
+     .section-about {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+ 
+     .section-about div {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+     
+ }
