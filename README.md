@@ -29,9 +29,9 @@
 
 [Grasielly Dias Apolinário](https://github.com/Grasielly84)
 
-[Guilherme Augusto Pinto](#)
+[Guilherme Augusto Pinto](https://github.com/GuilhermeAugust0)
 
-[Hellen dos Santos Ferreira](#)
+[Hellen dos Santos Ferreira](https://github.com/HellenS95)
 
 [Jeferson Ribeiro da Silva](https://github.com/1Jeferson)
 
