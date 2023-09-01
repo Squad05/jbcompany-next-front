@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-
-
 }
 
 body {
@@ -65,6 +63,10 @@ main {
 
 
 
+}
+
+.logo {
+    width: 160px;
 }
 
 .post-container {

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     background-image: url(../image/background-about.svg); 
     background-repeat: no-repeat; 
@@ -10,20 +11,48 @@ body {
     background-position: left;
 }
 
-div img {
+.logo {
+    width: 200px;
+}
+
+
+.section-about div img {
     height: 80px;
+    animation: animacaoIcones 2s infinite alternate;
+    margin-bottom: 20px;
+}
+
+@keyframes animacaoIcones {
+    0% {
+        transform: scale(1); 
+      }
+    100% {
+        transform: scale(1.2); 
+      }
 }
 
 .cabecalho-about {
     display: flex; 
     justify-content: space-between;
-    margin-top: 22px;
+    margin: 22px 40px 0 40px;
 }
-.cabecalho-about h2 {
-    margin-left: 50px;
+.container-about h2 {
+    overflow: hidden; 
+    white-space: nowrap;
+    letter-spacing: 2px; 
+    animation: animacaoEscrita 1s steps(16, end) forwards; 
 }
+
+@keyframes animacaoEscrita {
+    0% {
+        width: 0; 
+    }
+    100% {
+        width: 100%; 
+    }
+}
+
 .cabecalho-about a {
-    margin-right: 50px;
     border-radius: 15px;
     border: 1px solid #faf2ff;
     padding: 10px 25px 10px 25px;
@@ -39,8 +68,11 @@ div img {
 .container-about {
     display: flex;
     flex-direction: column;
-    margin-top: 90px;
-    margin-left: 50px;
+    margin:90px 40px 0 40px;
+}
+
+.container-about .section-frases {
+    width: max-content;
 }
 
 .container-about h1, .container-about h2 {
@@ -70,7 +102,7 @@ div img {
 
 .section-about {
     display: flex;
-    margin-top: 70px;
+    margin-top: 60px;
     gap: 50px;
 }
 
@@ -90,3 +122,19 @@ div img {
      }
      
  }
+
+ @media screen and (max-width: 650px) {
+    .logo {
+        width: 190px;
+    }
+    .cabecalho-about {
+        margin: 42px 10px 0 10px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .logo {
+        width: 160px;
+    }
+    
+}
