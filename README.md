@@ -17,6 +17,10 @@ Nós concluímos a fase inicial do projeto, que consistiu na criação da base d
 ### Modelagem de Dados
 
 Nós concluímos a modelagem de dados das funcionalidades.
+ 
+
+  ![](https://uploaddeimagens.com.br/images/004/594/970/full/modelagem_dados.PNG?1693574446)
+
 
 ## Próximos Passos
 
