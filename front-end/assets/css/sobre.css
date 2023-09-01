@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 0;    
 }
 
 body {
@@ -9,6 +9,7 @@ body {
     background-attachment: fixed; 
     background-size: cover; 
     background-position: left;
+
 }
 
 .logo {
@@ -124,17 +125,23 @@ body {
  }
 
  @media screen and (max-width: 650px) {
+    body {
+        overflow-x: hidden;
+
+    }
+    header {
+        gap:80px;
+    }
+
     .logo {
         width: 190px;
     }
-    .cabecalho-about {
-        margin: 42px 10px 0 10px;
-    }
+
 }
 
 @media screen and (max-width: 380px) {
-    .logo {
-        width: 160px;
+    header {
+        gap:80px;
     }
-    
+
 }
