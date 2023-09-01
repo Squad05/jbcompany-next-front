@@ -10,6 +10,7 @@ body {
     background-size: cover; 
     background-position: left;
 
+
 }
 
 .logo {
@@ -36,9 +37,9 @@ body {
     display: flex; 
     justify-content: space-between;
     margin: 22px 40px 0 40px;
+
 }
 .container-about h2 {
-    overflow: hidden; 
     white-space: nowrap;
     letter-spacing: 2px; 
     animation: animacaoEscrita 1s steps(16, end) forwards; 
