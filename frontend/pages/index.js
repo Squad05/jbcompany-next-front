@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import Head from "next/head";
+
 import Footer from "@/components/Footer";
 import Cards from "@/components/Cards";
 import Carrossel from "@/components/Carrossel";
