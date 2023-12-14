@@ -1,10 +1,10 @@
-package com.jobdelas;
+package com.api.jbcompany.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JobdelasApplicationTests {
+class ApiApplicationTests {
 
 	@Test
 	void contextLoads() {
