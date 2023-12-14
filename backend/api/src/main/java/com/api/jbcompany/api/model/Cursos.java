@@ -1,9 +1,11 @@
 package com.api.jbcompany.api.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+@Entity
 public class Cursos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
