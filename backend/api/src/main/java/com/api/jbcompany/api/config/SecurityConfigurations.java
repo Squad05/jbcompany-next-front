@@ -29,10 +29,7 @@ public class SecurityConfigurations {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.POST, "/auth/logar").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/cadastrar").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/paises").hasAuthority("ROLE_ADMIN")
-                        .requestMatchers(HttpMethod.POST, "/destinos").hasAuthority("ROLE_ADMIN")
-                        .requestMatchers(HttpMethod.PUT, "/paises").hasAuthority("ROLE_ADMIN")
-                        .requestMatchers(HttpMethod.PUT, "/destinos").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/aulas").hasAuthority("ROLE_ADMIN")
                         .anyRequest().authenticated())
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
