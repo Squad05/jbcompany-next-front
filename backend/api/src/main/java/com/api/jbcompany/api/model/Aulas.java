@@ -3,12 +3,13 @@ package com.api.jbcompany.api.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Id;
 
 @Entity
-public class Aula {
+public class Aulas {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,11 +22,11 @@ public class Aula {
     private String link;
     private String descricao;
 
-    public Aula() {
+    public Aulas() {
 
     }
 
-    public Aula(Long id, Cursos curso, String titulo, String link, String descricao) {
+    public Aulas(Long id, Cursos curso, String titulo, String link, String descricao) {
         this.id = id;
         this.curso = curso;
         this.titulo = titulo;
@@ -72,4 +73,5 @@ public class Aula {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
 }
