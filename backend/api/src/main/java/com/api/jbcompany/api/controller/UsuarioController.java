@@ -51,10 +51,10 @@ public class UsuarioController {
         if (this.usuariosRepository.findByEmail(data.email()) != null) {
             return ResponseEntity.badRequest().build();
         }
-        String encryptedPassword = new BCryptPasswordEncoder().encode(data.senha());
-        Usuarios novoUsuario = new Usuarios(data.nome(), data.email(), encryptedPassword, data.cargo());
+        String senhaCriptografada = new BCryptPasswordEncoder().encode(data.senha());
+        Usuarios novoUsuario = new Usuarios(data.nome(), data.email(), senhaCriptografada, data.cargo());
         this.usuariosRepository.save(novoUsuario);
-        return ResponseEntity.ok().body(novoUsuario);
+        return ResponseEntity.ok().body("Cadastro Realizado com sucesso");
     }
 
 }
