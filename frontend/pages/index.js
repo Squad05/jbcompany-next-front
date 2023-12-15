@@ -17,8 +17,8 @@ export default function Home() {
       <Navbar />
       <Carrossel />
       <Cards />
-      <Faq />
       <Equipe />
+      <Faq />
       <Footer />
     </div>
   );
