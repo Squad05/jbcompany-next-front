@@ -54,7 +54,7 @@ public class UsuarioController {
         String senhaCriptografada = new BCryptPasswordEncoder().encode(data.senha());
         Usuarios novoUsuario = new Usuarios(data.nome(), data.email(), senhaCriptografada, data.cargo());
         this.usuariosRepository.save(novoUsuario);
-        return ResponseEntity.ok().body("Cadastro Realizado com sucesso");
+        return ResponseEntity.ok().build();
     }
 
 }
