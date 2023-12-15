@@ -7,12 +7,12 @@ import com.api.jbcompany.api.model.Candidaturas;
 public interface CandidaturasService {
     List<Candidaturas> listarCandidaturas();
 
-    Candidaturas cadastrarCandidaturas(Candidaturas candidaturas);
+    Candidaturas cadastrarCandidatura(Candidaturas Candidatura);
 
-    Candidaturas atualizarCandidaturas(Long id, Candidaturas candidaturasAtualizado);
+    Candidaturas atualizarCandidatura(Long id, Candidaturas CandidaturaAtualizado);
 
-    void deletarCandidaturas(Long id);
+    void deletarCandidatura(Long id);
 
-    Candidaturas pegarCandidaturasPorId(Long id);
+    Candidaturas pegarCandidaturaPorId(Long id);
 
 }

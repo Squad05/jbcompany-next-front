@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.api.jbcompany.api.model.Candidaturas;
 import com.api.jbcompany.api.repository.CandidaturasRepository;
@@ -23,36 +22,32 @@ public class CandidaturasServiceImpl implements CandidaturasService {
     }
 
     @Override
-    @Transactional
-    public Candidaturas cadastrarCandidaturas(Candidaturas candidatura) {
+    public Candidaturas cadastrarCandidatura(Candidaturas candidatura) {
         return candidaturasRepository.save(candidatura);
     }
 
     @Override
-    @Transactional
-    public Candidaturas atualizarCandidaturas(Long id, Candidaturas candidaturaAtualizada) {
+    public Candidaturas atualizarCandidatura(Long id, Candidaturas candidaturaAtualizada) {
         Optional<Candidaturas> optionalCandidatura = candidaturasRepository.findById(id);
-        if (optionalCandidatura.isPresent()) {
-            Candidaturas candidaturaExistente = optionalCandidatura.get();
-            candidaturaExistente.setUsuarios(candidaturaAtualizada.getUsuarios());
-            candidaturaExistente.setVagas(candidaturaAtualizada.getVagas());
 
-            return candidaturasRepository.save(candidaturaExistente);
+        if (optionalCandidatura.isPresent()) {
+            Candidaturas candidatura = optionalCandidatura.get();
+            candidatura.setUsuarios(candidaturaAtualizada.getUsuarios());
+            candidatura.setVagas(candidaturaAtualizada.getVagas());
+
+            return candidaturasRepository.save(candidatura);
         } else {
-            throw new RuntimeException("Candidatura com ID " + id + " não encontrada para atualização.");
+            throw new RuntimeException("Candidatura com ID " + id + " não encontrado para atualização.");
         }
     }
 
     @Override
-    @Transactional
-    public void deletarCandidaturas(Long id) {
+    public void deletarCandidatura(Long id) {
         candidaturasRepository.deleteById(id);
     }
 
     @Override
-    @Transactional(readOnly = true)
-    public Candidaturas pegarCandidaturasPorId(Long id) {
-        return candidaturasRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Candidatura com ID " + id + " não encontrada."));
+    public Candidaturas pegarCandidaturaPorId(Long id) {
+        return candidaturasRepository.findById(id).orElse(null);
     }
 }
