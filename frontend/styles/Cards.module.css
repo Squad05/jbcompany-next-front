@@ -1,0 +1,40 @@
+.caixacard {
+    position: relative;
+    background-color: #B378FF;
+    transition: transform 0.3s, background-color 0.3s;
+    overflow: hidden; 
+    border: 1px solid #B378FF; /* Definindo a cor da borda padrão */
+  height: 400px;
+}
+  
+  .caixacard::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 50px 0 0; 
+    border-color: white transparent transparent transparent; 
+    transform: rotate(-180deg); 
+  
+}
+  
+  .caixacard:hover {
+    transform: scale(1.07);
+    border: 1px solid #B378FF;
+  }
+  
+  .titulocard, .descricaocard {
+    color: #fff;
+  }
+
+  .descricaocard {
+    font-size: 16px;
+  }
+
+
+  .imgcard {
+    border-radius: 5px;
+  }
