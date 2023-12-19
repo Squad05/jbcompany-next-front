@@ -14,20 +14,30 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import styles from '../styles/Navbar.module.css'
 import Link from '@mui/material/Link';
+import Formulario from './FormularioHome';
+import Popover from '@mui/material/Popover';
 
 
 const pages = ['Home', 'Sobre', 'Equipe', 'Faq'];
-const settings = ['Cadastrar', 'Entrar'];
+
 
 export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElForm, setAnchorElForm] = React.useState(null);
+  const [formType, setFormType] = React.useState('');
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
+  };
+
+  const handleOpenForm = (event, tipo) => {
+    setAnchorElForm(event.currentTarget);
+    setFormType(tipo);
   };
 
   const handleCloseNavMenu = () => {
@@ -38,11 +48,14 @@ export default function Navbar() {
     setAnchorElUser(null);
   };
 
+  const handleCloseForm = () => {
+    setAnchorElForm(null);
+  };
+
   return (
     <AppBar className={styles.navBar} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -92,7 +105,7 @@ export default function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link  href={`#${page.toLowerCase()}`} underline="none" textAlign="center">{page}</Link>
+                  <Link href={`#${page.toLowerCase()}`} underline="none" textAlign="center">{page}</Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -150,15 +163,33 @@ export default function Navbar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={(event) => { handleCloseUserMenu(); handleOpenForm(event, 'cadastrar'); }}>
+                <Typography textAlign="center">Cadastrar</Typography>
+              </MenuItem>
+
+              <MenuItem onClick={(event) => { handleCloseUserMenu(); handleOpenForm(event, 'entrar'); }}>
+                <Typography textAlign="center">Entrar</Typography>
+              </MenuItem>
             </Menu>
           </Box>
+
+
+          <Popover
+            id="popover-form"
+            open={Boolean(anchorElForm)}
+            anchorEl={anchorElForm}
+            onClose={handleCloseForm}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+          >
+            <Formulario onClose={handleCloseForm} tipo={formType} />
+          </Popover>
+
+
         </Toolbar>
       </Container>
-    </AppBar>
+    </AppBar >
   );
 }
