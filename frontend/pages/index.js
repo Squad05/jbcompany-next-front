@@ -7,6 +7,7 @@ import Cards from "@/components/Cards";
 import Carrossel from "@/components/Carrossel";
 import Faq from "@/components/Faq";
 import Equipe from "@/components/Equipe";
+import Scrollbtn from "@/components/Scrollbtn";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Equipe />
       <Faq />
       <Footer />
+      <Scrollbtn />
     </div>
   );
 }

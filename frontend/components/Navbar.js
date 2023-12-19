@@ -13,6 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import styles from '../styles/Navbar.module.css'
+import Link from '@mui/material/Link';
+
 
 const pages = ['Home', 'Sobre', 'Equipe', 'Faq'];
 const settings = ['Cadastrar', 'Entrar'];
@@ -90,7 +92,7 @@ export default function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Link  href={`#${page.toLowerCase()}`} underline="none" textAlign="center">{page}</Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -118,7 +120,7 @@ export default function Navbar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                href={`#${page.toLowerCase()}`}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}

@@ -36,7 +36,7 @@ export default function Equipe() {
         <Grid container spacing={2} justifyContent="center">
             <Grid item xs={12} md={4}>
                 <Box textAlign="center">
-                    <Typography variant="h5" gutterBottom>
+                    <Typography variant="h5" gutterBottom id="equipe">
                         Equipe
                     </Typography>
                     <Typography variant="body1" color='text.secondary'>

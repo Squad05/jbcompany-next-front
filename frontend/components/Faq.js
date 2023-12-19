@@ -27,7 +27,7 @@ export default function Faq() {
         <Container maxWidth='lg'>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
-                    <Typography variant="h4" sx={{ mb: 1 }}>FAQ</Typography>
+                    <Typography variant="h4" id="faq" sx={{ mb: 1 }}>FAQ</Typography>
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <TextField

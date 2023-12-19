@@ -4,6 +4,7 @@ import Link from '@mui/material/Link';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import styles from '../styles/Footer.module.css'
 
+
 export default function Footer() {
 
     return (
@@ -62,6 +63,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+           
         </footer>
     );
 }
