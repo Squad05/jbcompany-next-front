@@ -9,6 +9,15 @@ const Formulario = ({ onClose, tipo }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        if (tipo === 'cadastrar') {
+            if (!nome || !email || !senha) {
+                return;
+            }
+        } else {
+            if (!email || !senha) {
+                return;
+            }
+        }
         onClose();
     };
 
@@ -17,6 +26,7 @@ const Formulario = ({ onClose, tipo }) => {
             {tipo === 'cadastrar' && (
                 <TextField
                     label="Nome"
+                    type="text"
                     variant="outlined"
                     fullWidth
                     margin="normal"
@@ -27,6 +37,7 @@ const Formulario = ({ onClose, tipo }) => {
             <TextField
                 label="Email"
                 variant="outlined"
+                type="email"
                 fullWidth
                 margin="normal"
                 value={email}
