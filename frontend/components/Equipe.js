@@ -35,7 +35,7 @@ export default function Equipe() {
     return (
         <Grid container spacing={2} justifyContent="center">
             <Grid item xs={12} md={4}>
-                <Box textAlign="center">
+                <Box textAlign="center" sx={{mt: 15}}>
                     <Typography variant="h5" gutterBottom id="equipe">
                         Equipe
                     </Typography>
@@ -54,7 +54,7 @@ export default function Equipe() {
                                 <TimelineDot variant="outlined" color={index % 2 === 0 ? 'primary' : 'secondary'} />
                                 <TimelineConnector />
                             </TimelineSeparator>
-                            <TimelineContent>
+                            <TimelineContent sx={{py:0}}>
                                 <IconButton onClick={(e) => handleClick(e, user)}>
                                     <Avatar
                                         alt={user.name}
