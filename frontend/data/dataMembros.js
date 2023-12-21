@@ -1,7 +1,7 @@
 const membros = [
   {
     name: "Jeferson",
-    image: "/static/img/euzinho.jpg",
+    image: "imagens/jefersonicon.jpg",
     descricao: "Desenvolvedor",
     github: "https://github.com/1Jeferson",
   },
