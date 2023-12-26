@@ -8,7 +8,7 @@ import Faq from "@/components/Faq";
 import Equipe from "@/components/Equipe";
 import Scrollbtn from "@/components/Scrollbtn";
 
-export default function Home() {
+export default function Index() {
   return (
     <div>
       <Head>
