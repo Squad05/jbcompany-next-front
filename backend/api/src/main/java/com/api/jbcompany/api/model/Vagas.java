@@ -16,7 +16,7 @@ public class Vagas {
 
     @ManyToOne
     @JoinColumn(name = "empresa_id")
-    private Empresas empresas;
+    private Usuarios empresas;
 
     private String descricao;
     private String cep;
@@ -25,7 +25,7 @@ public class Vagas {
     private boolean status_vaga;
     private int salario;
 
-    public Vagas(Long id, Empresas empresas, String descricao, String cep, String localizacao, String funcao,
+    public Vagas(Long id, Usuarios empresas, String descricao, String cep, String localizacao, String funcao,
             boolean status_vaga, int salario) {
         this.id = id;
         this.empresas = empresas;
@@ -45,11 +45,11 @@ public class Vagas {
         this.id = id;
     }
 
-    public Empresas getEmpresas() {
+    public Usuarios getEmpresas() {
         return empresas;
     }
 
-    public void setEmpresas(Empresas empresas) {
+    public void setEmpresas(Usuarios empresas) {
         this.empresas = empresas;
     }
 
@@ -104,4 +104,5 @@ public class Vagas {
     public Vagas() {
 
     }
+
 }

@@ -1,10 +1,13 @@
 package com.api.jbcompany.api.controller;
 
 import com.api.jbcompany.api.model.Candidaturas;
+import com.api.jbcompany.api.model.Usuarios;
 import com.api.jbcompany.api.service.CandidaturasService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,9 +26,11 @@ public class CandidaturasController {
     }
 
     @PostMapping
-    public ResponseEntity<Candidaturas> cadastrarCandidatura(@RequestBody Candidaturas candidatura) {
+    public ResponseEntity<?> cadastrarCandidatura(@RequestBody Candidaturas candidatura) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
         Candidaturas novaCandidatura = candidaturasService.cadastrarCandidatura(candidatura);
-        return ResponseEntity.status(HttpStatus.CREATED).body(novaCandidatura);
+        return ResponseEntity.status(HttpStatus.CREATED).body(auth);
     }
 
     @GetMapping("/{id}")

@@ -34,7 +34,6 @@ public class VagasServiceImpl implements VagasService {
         Optional<Vagas> optionalVaga = vagasRepository.findById(id);
         if (optionalVaga.isPresent()) {
             Vagas vagaExistente = optionalVaga.get();
-            vagaExistente.setEmpresas(vagasAtualizado.getEmpresas());
             vagaExistente.setDescricao(vagasAtualizado.getDescricao());
             vagaExistente.setCep(vagasAtualizado.getCep());
             vagaExistente.setLocalizacao(vagasAtualizado.getLocalizacao());

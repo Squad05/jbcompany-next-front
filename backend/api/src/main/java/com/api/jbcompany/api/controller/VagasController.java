@@ -1,10 +1,18 @@
 package com.api.jbcompany.api.controller;
 
+import com.api.jbcompany.api.model.Usuarios;
 import com.api.jbcompany.api.model.Vagas;
+import com.api.jbcompany.api.repository.UsuariosRepository;
+import com.api.jbcompany.api.service.AuthorizationService;
+import com.api.jbcompany.api.service.UsuariosService;
 import com.api.jbcompany.api.service.VagasService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,6 +20,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/vagas")
 public class VagasController {
+
+    @Autowired
+    private UsuariosService usuariosService;
+
+    @Autowired
+    private AuthorizationService authorizationService;
 
     @Autowired
     private VagasService vagasService;
@@ -23,9 +37,18 @@ public class VagasController {
     }
 
     @PostMapping
-    public ResponseEntity<Vagas> cadastrarVagas(@RequestBody Vagas vaga) {
-        Vagas novaVaga = vagasService.cadastrarVagas(vaga);
-        return ResponseEntity.status(HttpStatus.CREATED).body(novaVaga);
+    public ResponseEntity<?> cadastrarVagas(@RequestBody Vagas vaga) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        Usuarios usuario = usuariosService.encontrarUsuarioPorEmail(auth.getName());
+
+        if (usuario != null) {
+            vaga.setEmpresas(usuario);
+            Vagas novaVaga = vagasService.cadastrarVagas(vaga);
+            return ResponseEntity.status(HttpStatus.CREATED).body(novaVaga);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 
     @GetMapping("/{id}")

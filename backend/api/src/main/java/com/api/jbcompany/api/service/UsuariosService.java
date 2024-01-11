@@ -2,14 +2,25 @@ package com.api.jbcompany.api.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
+
 import com.api.jbcompany.api.model.Usuarios;
+import com.api.jbcompany.api.model.UsuariosRole;
+import com.api.jbcompany.api.repository.UsuariosRepository;
 
-public interface UsuariosService {
-    List<Usuarios> listarUsuarios();
+@Service
+public class UsuariosService {
 
-    Usuarios pegarUsuarioPorId(Long id);
+    @Autowired
+    private AuthorizationService authorizationService;
 
-    Usuarios atualizarUsuario(Long id, Usuarios usuarioAtualizado);
+    @Autowired
+    private UsuariosRepository usuariosRepository;
 
-    void deletarUsuario(Long id);
+    public Usuarios encontrarUsuarioPorEmail(String email) {
+        return usuariosRepository.findByEmail(email);
+    }
+
 }

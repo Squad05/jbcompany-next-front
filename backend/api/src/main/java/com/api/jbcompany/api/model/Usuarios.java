@@ -26,6 +26,9 @@ public class Usuarios implements UserDetails {
 
     private UsuariosRole cargo;
 
+    public Usuarios() {
+    }
+
     public Usuarios(String nome, String email, String senha, UsuariosRole cargo) {
         this.nome = nome;
         this.email = email;
@@ -33,11 +36,21 @@ public class Usuarios implements UserDetails {
         this.cargo = cargo;
     }
 
-    public UsuariosRole getCargo() {
-        return cargo;
-    }
+    private String telefone;
 
-    public void setCargo(UsuariosRole cargo) {
+    private String area_de_atuacao;
+
+    private String descricao;
+
+    public Usuarios(Long id, String nome, String email, String senha, String telefone, String area_de_atuacao,
+            String descricao, UsuariosRole cargo) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.telefone = telefone;
+        this.area_de_atuacao = area_de_atuacao;
+        this.descricao = descricao;
         this.cargo = cargo;
     }
 
@@ -71,6 +84,38 @@ public class Usuarios implements UserDetails {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getArea_de_atuacao() {
+        return area_de_atuacao;
+    }
+
+    public void setArea_de_atuacao(String area_de_atuacao) {
+        this.area_de_atuacao = area_de_atuacao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public UsuariosRole getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(UsuariosRole cargo) {
+        this.cargo = cargo;
     }
 
     @Override
@@ -109,9 +154,6 @@ public class Usuarios implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
-
-    public Usuarios() {
     }
 
 }
