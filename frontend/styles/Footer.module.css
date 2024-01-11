@@ -1,3 +1,54 @@
-.footer {
-    background-color: #B378FF;
+
+.estilo_footer {
+    background-color: #0D0117;
+    color: white;
+    padding-top: 25px ;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
+
+
+.estilo_secoes_footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 80px;
+}
+  .estilo_footer .estilo_secoes_footer  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .estilo_footer  .estilo_secoes_footer  a:hover {
+    color: #B378FF;
+  }
+
+  .estilobotao {
+    background-color: #B378FF;
+  }
+
+  .estilobotao:hover {
+    background-color: white;
+    color:   #0D0117;
+  }
+  
+  .estilo_footer h5 {
+    color: #B378FF;
+  }
+
+
+  .estilocredito {
+    padding: 10px 0;
+    background-color: #B378FF;
+    color:#0D0117;
+  }
+  .estilocredito  p{
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 850px) {
+    .estilo_secoes_footer {
+      margin: 0px 40px;
+    }
+    
+   }

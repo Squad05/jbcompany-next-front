@@ -10,7 +10,7 @@ import styles from "../styles/Cards.module.css";
 
 export default function Cards() {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" id="sobre">
       <Grid container spacing={3}>
         {cards.map((step, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
