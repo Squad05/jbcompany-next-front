@@ -9,7 +9,7 @@ export default function Footer() {
           <h5>Seções</h5>
           <ul className="nav flex-column">
             <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0">
+              <a href="/" className="nav-link p-0">
                 Home
               </a>
             </li>

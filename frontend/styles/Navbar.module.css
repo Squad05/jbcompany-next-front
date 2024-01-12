@@ -4,6 +4,16 @@
     display: flex;
 }
 
+/* Botões de navegação da dashboard */
+.nome_icon {
+    color: #fff;
+    padding: 15px;
+}
+
+.botao_icon {
+    color: #fff;
+}
+
 .navBar div {
     gap: 20px;
 }
