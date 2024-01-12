@@ -1,12 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
-
 import Footer from "@/components/Footer";
 import Cards from "@/components/Cards";
-import Carrossel from "@/components/Carrossel";
 import Faq from "@/components/Faq";
 import Equipe from "@/components/Equipe";
 import Scrollbtn from "@/components/Scrollbtn";
+import Intro_LandingPage from "@/components/Intro_LandingPage";
 
 export default function Index() {
   return (
@@ -15,7 +14,7 @@ export default function Index() {
         <title> Jb Company</title>
       </Head>
       <Navbar />
-      <Carrossel />
+      <Intro_LandingPage />
       <Cards />
       <Equipe />
       <Faq />

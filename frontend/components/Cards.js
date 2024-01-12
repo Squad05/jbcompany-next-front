@@ -8,7 +8,12 @@ import Typography from "@mui/material/Typography";
 import cards from "../data/dataCards";
 import styles from "../styles/Cards.module.css";
 
+import { useEffect } from "react";
+
 export default function Cards() {
+  useEffect(() => {
+    console.log("efeito");
+  });
   return (
     <Container maxWidth="lg" id="sobre">
       <Grid container spacing={3}>

@@ -1,8 +1,17 @@
 .navBar {
     background-color: #0D0117;
     padding: 20px;
+    display: flex;
 }
 
+.navBar div {
+    gap: 20px;
+}
+
+.navBar a:hover {
+    color:#B378FF;
+    background-color: transparent;
+}
 
 .itemNavBarEstilo {
     font-size: 20px;

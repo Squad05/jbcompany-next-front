@@ -1,0 +1,33 @@
+.intro_div {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 80px;
+}
+
+.intro_div  .div_texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro_div .div_texto h2 {
+    font-size: 50px;
+}
+
+.intro_div .div_texto h3 {
+    font-size: 30px;
+    background-color:#B378FF;
+    border-radius: 5px;
+    width: max-content;
+    padding: 5px 5px 5px 2px;
+    color: white;
+}
+
+.intro_div .div_texto p {
+    font-size: 20px;
+}
+
+
+.intro_div img {
+    height: 500px;
+}
