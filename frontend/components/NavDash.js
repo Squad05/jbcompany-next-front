@@ -16,33 +16,29 @@ import { styled } from '@mui/material/styles';
 
 
 import HomeIcon from '@mui/icons-material/Home';
-import MessageIcon from '@mui/icons-material/Message';
 import BookIcon from '@mui/icons-material/Book';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
-import PersonIcon from '@mui/icons-material/Person';
 import MenuIcon from '@mui/icons-material/Menu';
 import styles from "../styles/Navbar.module.css";
-import Logo from './Logo';
-import Cards from './Cards';
+
 import Avatar from '@mui/material/Avatar';
 import Badge from '@mui/material/Badge';
 import Stack from '@mui/material/Stack';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-
+import Link from 'next/link';
+import Logo from '@/components/Logo';
 
 
 // Largura da SideBar
 const drawerWidth = 230;
 
 const icones = {
-    'Home': <HomeIcon />,
-    'Mensagem': <MessageIcon />,
+    'Home': <HomeIcon />, 
     'Cursos': <BookIcon />,
     'Vagas': <BusinessCenterIcon />,
-    'Perfil': <PersonIcon />,
-    'Configurações': <SettingsIcon />,
+    'Settings': <SettingsIcon />,
     'Sair': <LogoutIcon />,
 };
 
@@ -94,25 +90,25 @@ function Navbarlateral(props) {
             setMobileOpen(!mobileOpen);
         }
     };
-    
+
 
     const drawer = (
         <div>
-
             <Divider />
             <List sx={{ mt: 10 }}>
-                {['Home', 'Mensagem', 'Cursos', 'Vagas', 'Perfil', 'Configurações', 'Sair'].map((text, index) => (
+                {['Home', 'Cursos', 'Vagas', 'Settings', 'Sair'].map((text, index) => (
                     <ListItem key={text} disablePadding>
-                        <ListItemButton className={styles.nome_icon}>
+                        <ListItemButton >
                             <ListItemIcon className={styles.botao_icon}>
                                 {icones[text]}
                             </ListItemIcon>
-                            <ListItemText primary={text} />
+                            <Link className={styles.nome_icon} href={`/dashboard/${text.toLowerCase()}`} passHref>
+                                <ListItemText primary={text} />
+                            </Link>
                         </ListItemButton>
                     </ListItem>
                 ))}
             </List>
-
         </div>
     );
 
@@ -140,8 +136,8 @@ function Navbarlateral(props) {
                         <MenuIcon />
                     </IconButton>
                     <Logo />
-                     <Toolbar />
-                     {/* Icone de notificação */}
+                    <Toolbar />
+                    {/* Icone de notificação */}
                     <Box sx={{ flexGrow: 1 }} />
                     <IconButton color="inherit" sx={{ mr: 2 }}>
                         <Badge badgeContent={4} color="error">
@@ -201,8 +197,8 @@ function Navbarlateral(props) {
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
             >
                 <Toolbar sx={{ mt: 5 }} />
-                {/* Conteúdo abaixo */}
-                <Cards />
+                {/* Conteúdo abaixo */} 
+                
             </Box>
         </Box>
     );

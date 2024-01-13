@@ -1,5 +1,6 @@
+import Navbarlateral from "@/components/NavDash";
 import Head from "next/head";
-import MiniDrawer from "@/components/Navbarlateral";
+
 
 
 export default function Home () {
@@ -8,8 +9,8 @@ export default function Home () {
       <Head>
         <title> Jb Company</title>
       </Head>
-      <MiniDrawer />
-     
+      <Navbarlateral />
+        
     </div>
   );
 }
