@@ -1,6 +1,7 @@
-import Cards from "@/components/Cards";
 import Navbarlateral from "@/components/NavDash";
+import Configuracoes from "@/components/Configuracao";
 import Head from "next/head";
+import { ConfiguracaoUser } from "@/components/ConfiguracaoUser";
 
 export default function Settings() {
     return (
@@ -9,7 +10,8 @@ export default function Settings() {
                 <title> Jb Company</title>
             </Head>
             <Navbarlateral />
-            <Cards />
+            <Configuracoes />
+            <ConfiguracaoUser />
         </div>
     )
 }
