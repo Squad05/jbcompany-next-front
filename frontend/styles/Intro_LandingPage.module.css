@@ -31,3 +31,7 @@
 .intro_div img {
     height: 500px;
 }
+
+.intro_div .div_texto span {
+    font-size: 22px;
+}

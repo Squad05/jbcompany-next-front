@@ -10,6 +10,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
 import Grid from "@mui/material/Grid";
 import faqData from "@/data/dataFaq";
+import styles from "../styles/Faq.module.css";
 
 export default function Faq() {
   const [expanded, setExpanded] = React.useState(false);
@@ -24,7 +25,7 @@ export default function Faq() {
   };
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" className={styles.container_faq}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <Typography variant="h4" id="faq" sx={{ mb: 1 }}>

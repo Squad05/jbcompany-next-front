@@ -1,21 +1,16 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Intro_LandingPage.module.css";
 import VagaService from "@/services/VagaService";
+import axios from "axios";
 
 export default function Intro_LandingPage() {
   const [totalVagas, setTotalVagas] = useState(0);
 
   useEffect(() => {
     const fetchTotalVagas = async () => {
-      console.log("oi");
-
       try {
-        console.log("oi");
         const listaVagas = await VagaService.listarVagas();
         const total = listaVagas.length;
-
-        console.log(listaVagas);
-
         setTotalVagas(total);
       } catch (error) {
         console.error("Erro ao buscar " + error);

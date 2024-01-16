@@ -1,0 +1,30 @@
+.container_equipe {
+    margin: 20px 80px;
+}
+
+
+
+.listamembros {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+
+
+.card_membro img  {
+    width: 190px;
+    height: 190px;
+}
+
+.container_redes {
+    justify-content: center;
+    gap: 5px;
+    display:flex ;
+}
+
+.container_redes a {
+    color: #B378FF;
+}

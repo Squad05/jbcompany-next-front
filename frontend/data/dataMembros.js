@@ -1,34 +1,39 @@
 const membros = [
   {
-    name: "Jeferson",
-    image: "imagens/jefersonicon.jpg",
+    nome: "Jeferson",
+    imagem: "imagens/jefersonicon.jpg",
     descricao: "Desenvolvedor",
     github: "https://github.com/1Jeferson",
+    linkedin: "",
   },
   {
-    name: "Eduarda",
-    image: "imagens/mariaicon.png",
+    nome: "Eduarda",
+    imagem: "imagens/mariaicon.png",
     descricao: "Desenvolvedor",
     github: "https://github.com/MeDourado",
+    linkedin: "",
   },
   {
-    name: "Grasiely",
-    image: "imagens/grasiicon.jpeg",
+    nome: "Grasiely",
+    imagem: "imagens/grasiicon.jpeg",
     descricao: "lorem",
     github: "https://github.com/Grasielly84",
+    linkedin: "",
   },
   {
-    name: "Guilherme B",
-    image: "imagens/guiicon.jpeg",
+    nome: "Guilherme B",
+    imagem: "imagens/guiicon.jpeg",
     descricao: "lorem",
     github: "",
+    linkedin: "",
   },
   {
-    name: "Guilherme A",
-    image:
+    nome: "Guilherme A",
+    imagem:
       "https://img.freepik.com/vetores-gratis/ilustracao-de-homem-negocios_53876-5856.jpg?size=626&ext=jpg&uid=R111068403&ga=GA1.1.15122235.1701100695&semt=sph",
     descricao: "lorem",
-    github: "",
+    github: "https://github.com/Grasielly84",
+    linkedin: "",
   },
 ];
 
