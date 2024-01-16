@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import styles from "../styles/FormLandingPage.module.css";
 
@@ -16,6 +16,7 @@ export default function FormLogin() {
   const [senha, setSenha] = useState("");
   const [email, setEmail] = useState("");
   const [errorMensagem, setErrorMensagem] = useState("");
+  const router = useRouter(); // Utilize useRouter para navegação
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,6 +38,8 @@ export default function FormLogin() {
         const { token } = response.data;
 
         localStorage.setItem("token", token);
+
+        router.push("/dashboard/vagas"); // Utilize router.push para navegar
 
         console.log("token " + token);
       } else {
