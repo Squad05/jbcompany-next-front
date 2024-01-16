@@ -20,7 +20,7 @@ const Configuracoes = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Card sx={{ maxWidth: 1300, margin: 'auto', mr: 1}}>
+      <Card sx={{ mt: 3}}>
         <CardHeader subheader="Gerencie as notificações" title="Notificações" />
         <Divider />
         <CardContent>

@@ -9,7 +9,7 @@ export default function Home () {
       <Head>
         <title> Jb Company</title>
       </Head>
-      <Navbarlateral />
+      <Navbarlateral content={[]} />
         
     </div>
   );

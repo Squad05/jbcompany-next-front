@@ -57,7 +57,7 @@ VagaCard.propTypes = {
 const VagaCardList = () => {
     return (
         <Container maxWidth="lg">
-            <Grid container spacing={4} justifyContent={{ xs: 'center', lg: 'flex-end' }}>
+            <Grid container spacing={4} >
                 {Vagas.map((vaga, index) => (
                     <Grid item key={index}>
                         <VagaCard vaga={vaga} />

@@ -9,9 +9,7 @@ export default function Settings() {
             <Head>
                 <title> Jb Company</title>
             </Head>
-            <Navbarlateral />
-            <Configuracoes />
-            <ConfiguracaoUser />
+            <Navbarlateral content= {[<Configuracoes />, <ConfiguracaoUser /> ]}  />
         </div>
     )
 }

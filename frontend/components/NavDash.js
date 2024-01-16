@@ -11,16 +11,16 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import MenuIcon from '@mui/icons-material/Menu';
+
 import Toolbar from '@mui/material/Toolbar';
 import { styled } from '@mui/material/styles';
-
 
 import HomeIcon from '@mui/icons-material/Home';
 import BookIcon from '@mui/icons-material/Book';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
-import MenuIcon from '@mui/icons-material/Menu';
 import styles from "../styles/Navbar.module.css";
 
 import Avatar from '@mui/material/Avatar';
@@ -30,12 +30,11 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import Link from 'next/link';
 import Logo from '@/components/Logo';
 
-
 // Largura da SideBar
 const drawerWidth = 230;
 
 const icones = {
-    'Home': <HomeIcon />, 
+    'Home': <HomeIcon />,
     'Cursos': <BookIcon />,
     'Vagas': <BusinessCenterIcon />,
     'Settings': <SettingsIcon />,
@@ -72,7 +71,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 function Navbarlateral(props) {
-    const { window } = props;
+    const { window, content } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [isClosing, setIsClosing] = React.useState(false);
 
@@ -91,14 +90,13 @@ function Navbarlateral(props) {
         }
     };
 
-
     const drawer = (
         <div>
             <Divider />
             <List sx={{ mt: 10 }}>
                 {['Home', 'Cursos', 'Vagas', 'Settings', 'Sair'].map((text, index) => (
                     <ListItem key={text} disablePadding>
-                        <ListItemButton >
+                        <ListItemButton>
                             <ListItemIcon className={styles.botao_icon}>
                                 {icones[text]}
                             </ListItemIcon>
@@ -175,7 +173,6 @@ function Navbarlateral(props) {
                         display: { xs: 'block', sm: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#0D0117' },
                     }}
-
                 >
                     {drawer}
                 </Drawer>
@@ -197,8 +194,10 @@ function Navbarlateral(props) {
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
             >
                 <Toolbar sx={{ mt: 5 }} />
-                {/* Conteúdo abaixo */} 
-                
+                {/* Renderiza cada item do array de conteúdos */}
+                {content.map((item, index) => (
+                    <div key={index}>{item}</div>
+                ))}
             </Box>
         </Box>
     );
@@ -206,6 +205,7 @@ function Navbarlateral(props) {
 
 Navbarlateral.propTypes = {
     window: PropTypes.func,
+    content: PropTypes.array.isRequired,
 };
 
 export default Navbarlateral;
