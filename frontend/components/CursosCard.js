@@ -44,9 +44,9 @@ CursoCard.propTypes = {
 const CursoCardList = () => {
     return (
         <Container maxWidth="lg">
-            <Grid container spacing={4} justifyContent={{ xs: 'center', lg: 'flex-end' }}>
+            <Grid container spacing={4}>
                 {Cursos.map((curso, index) => (
-                    <Grid item xs={12} sm={6} md={4} key={index}>
+                    <Grid item xs={12} sm={6} md={6} key={index}>
                         <CursoCard curso={curso} />
                     </Grid>
                 ))}

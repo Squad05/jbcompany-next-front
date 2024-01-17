@@ -1,6 +1,8 @@
 import Configuracoes from "@/components/Configuracao";
 import Head from "next/head";
 import { ConfiguracaoUser } from "@/components/ConfiguracaoUser";
+import Menu from "@/components/NavDash";
+
 
 export default function Settings() {
   return (
@@ -8,6 +10,8 @@ export default function Settings() {
       <Head>
         <title> Jb Company</title>
       </Head>
+      <Menu />
+      <ConfiguracaoUser />
     </div>
   );
 }

@@ -37,11 +37,11 @@ export const ConfiguracaoUser = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <Card sx={{ maxWidth: 1300, margin: 'auto', mt: 15, mb: 15, mr: 1 }}>
+            <Card >
                 <CardHeader subheader="Atualize sua conta" title="Conta" />
                 <Divider />
                 <CardContent>
-                    <Stack spacing={2} sx={{ maxWidth: 1300, margin: 'auto' }}>
+                    <Stack spacing={2}>
                         <TextField
                             fullWidth
                             label="Nome"
