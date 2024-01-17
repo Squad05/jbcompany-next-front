@@ -1,19 +1,9 @@
 .navBar {
-    background-color: #0D0117;
+    background-color: #0D0117  !important;
     padding: 20px;
     display: flex;
 }
 
-/* Botões de navegação da dashboard */
-.nome_icon {
-    color: #fff;
-    padding: 15px;
-    text-decoration: none;
-}
-
-.botao_icon {
-    color: #fff;
-}
 
 .navBar div {
     gap: 20px;
@@ -24,12 +14,12 @@
     background-color: transparent;
 }
 
-.itemNavBarEstilo {
+.navBar .itemNavBarEstilo {
     font-size: 20px;
 }
 
 
-.botaoEstilo {
+.navBar .botaoEstilo {
     background-color: #B378FF;
     color:white;
     border: none;
@@ -40,12 +30,9 @@
     border-radius: 15px;
 }
 
-.botaoEstilo:hover {
+.navBar .botaoEstilo:hover {
     background-color: white !important;
     color:#B378FF;
 }
 
-.boxSwitch {
-    min-height: 120px;
-}
 

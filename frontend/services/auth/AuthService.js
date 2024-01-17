@@ -15,6 +15,7 @@ const login = async (email, senha) => {
 
     if (response.data) {
       const { token } = response.data;
+
       localStorage.setItem("token", token);
       return token;
     } else {

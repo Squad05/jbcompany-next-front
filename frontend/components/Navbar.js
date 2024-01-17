@@ -1,3 +1,5 @@
+import styles from "../styles/Navbar.module.css";
+
 import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -8,7 +10,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import styles from "../styles/Navbar.module.css";
 import Link from "@mui/material/Link";
 import Logo from "./Logo";
 
