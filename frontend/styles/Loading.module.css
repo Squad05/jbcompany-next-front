@@ -1,0 +1,31 @@
+.estilo_loading {
+    background-color: #0D0117;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.estilo_loading img {
+    width: 200px;
+    height: auto;
+    animation: pulse 1.5s ease-in-out infinite; 
+}
+
+.loadingText {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+    /* animation: pulse 1.5s ease-in-out infinite;  */
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);  
+    }
+    50% {
+        transform: scale(1.2);  
+    }
+}
