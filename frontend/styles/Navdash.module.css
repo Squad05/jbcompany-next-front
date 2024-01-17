@@ -1,0 +1,17 @@
+.estilo_navdash {
+    background-color: #0D0117;
+    padding: 15px 0;
+}
+
+.estilo_navdash  .caixa_botao_menu {
+    color:#B378FF;
+}
+
+.estilo_navdash  .caixa_botao_menu .botao_menu {
+    font-size: 40px;
+}
+
+.estilo_navdash .menu_lateral {
+    background-color: red;
+    width: 500px;
+}

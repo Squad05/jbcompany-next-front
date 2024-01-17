@@ -6,20 +6,22 @@ import {
   CssBaseline,
   Paper,
   Typography,
-} from '@mui/material';
+} from "@mui/material";
 import CursoCardList from "@/components/CursosCard";
 
-
 const ConteudoPrincipal = ({ pageTitle }) => (
-  <Container sx={{ mt: 20, display: 'flex', justifyContent: 'flex-end' }}>
+  <Container sx={{ mt: 20, display: "flex", justifyContent: "flex-end" }}>
     <CssBaseline />
-    <Paper sx={{ width: '1020px', padding: 2, display: 'flex', justifyContent: 'space-between' }}>
+    <Paper
+      sx={{
+        width: "1020px",
+        padding: 2,
+        display: "flex",
+        justifyContent: "space-between",
+      }}
+    >
       <Typography variant="h4">{pageTitle}</Typography>
-      <Button
-        variant="contained"
-        color="primary"
-        startIcon={<span>+</span>}
-      >
+      <Button variant="contained" color="primary" startIcon={<span>+</span>}>
         Add
       </Button>
     </Paper>

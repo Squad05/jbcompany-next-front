@@ -1,13 +1,12 @@
-import axios from "axios";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import { login } from "@/services/auth/AuthService";
 import styles from "../styles/FormLandingPage.module.css";
 
 import {
   FormControl,
   InputLabel,
   Input,
-  FormHelperText,
   Button,
   Typography,
 } from "@mui/material";
@@ -16,37 +15,16 @@ export default function FormLogin() {
   const [senha, setSenha] = useState("");
   const [email, setEmail] = useState("");
   const [errorMensagem, setErrorMensagem] = useState("");
-  const router = useRouter(); // Utilize useRouter para navegação
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const dados = {
-      email,
-      senha,
-    };
-
     try {
-      const response = await axios.post(
-        "https://jbcompanyapi.onrender.com/auth/logar",
-        dados
-      );
-
-      console.log("response" + response);
-
-      if (response.data) {
-        const { token } = response.data;
-
-        localStorage.setItem("token", token);
-
-        router.push("/dashboard/vagas"); // Utilize router.push para navegar
-
-        console.log("token " + token);
-      } else {
-        setErrorMensagem("Email ou senha invalidos");
-      }
+      const token = await login(email, senha);
+      router.push("/dashboard/vagas");
     } catch (erro) {
-      console.error("Erro ao enviar requisição:", erro.message);
+      setErrorMensagem(erro.message);
     }
   };
 

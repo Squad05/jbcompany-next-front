@@ -1,5 +1,5 @@
 import React, { use, useState } from "react";
-import axios from "axios";
+import { useRouter } from "next/router";
 
 import {
   FormControl,
@@ -11,43 +11,23 @@ import {
 } from "@mui/material";
 import Logo from "./Logo";
 import styles from "../styles/FormLandingPage.module.css";
+import { cadastrar } from "@/services/auth/CadastroService";
 
 export default function FormCadastro() {
-  // Estados para os campos do formulário
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [errorMensagem, setErrorMensagem] = useState("");
+  const router = useRouter();
 
-  // Função para lidar com o envio do formulário
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const dados = {
-      nome,
-      email,
-      senha,
-    };
-
-    console.log(dados);
-
     try {
-      const response = await axios.post(
-        "https://jbcompanyapi.onrender.com/auth/cadastrar",
-        dados
-      );
-      console.log("Resposta do servidor:", response.data);
+      const cadastrarUsuario = await cadastrar(nome, email, senha);
+      router.push("/auth/logar");
     } catch (erro) {
-      console.error("Erro ao enviar requisição:", erro.message);
-      if (erro.response && erro.response.status === 409) {
-        setErrorMensagem(
-          "Usuário já existe. Por favor, escolha outro nome ou email."
-        );
-      } else {
-        setErrorMensagem(
-          "Erro ao processar a requisição. Tente novamente mais tarde."
-        );
-      }
+      setErrorMensagem(erro.message);
     }
   };
 
