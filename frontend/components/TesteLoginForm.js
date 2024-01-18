@@ -1,6 +1,7 @@
 // components/TesteLoginForm.js
 
 import { useState } from 'react';
+import styles from '@/styles/TesteLoginForm.module.css';
 
 const TesteLoginForm = ({ onSubmit }) => {
     const [login, setLogin] = useState('');
