@@ -2,7 +2,6 @@ import CursoCardList from "@/components/CursosCard";
 import Menu from "@/components/NavDash";
 import Head from "next/head";
 
-
 export default function Cursos() {
   return (
     <div>
@@ -10,6 +9,7 @@ export default function Cursos() {
         <title> Jb Company</title>
       </Head>
       <Menu />
+
       <CursoCardList />
     </div>
   );

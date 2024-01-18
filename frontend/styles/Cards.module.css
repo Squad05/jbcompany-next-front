@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  align-content: center;
   margin: 0 auto;
 }
 
@@ -46,4 +47,11 @@
 
 .container_cards .caixacard .imgcard {
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container_cards .caixacard {
+    height: 490px;
+    margin: 5px; 
+  }
 }

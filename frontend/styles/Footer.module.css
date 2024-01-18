@@ -39,8 +39,9 @@
 
   .estilocredito {
     padding: 10px 0;
-    background-color: #B378FF;
-    color:#0D0117;
+    background-color:#B378FF;
+    color:#ffffff;
+    font-weight: 500;
   }
   .estilocredito  p{
     text-align: center;
