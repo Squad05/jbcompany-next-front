@@ -12,11 +12,11 @@
     font-size: 40px;
 }
 
-.menuDrawer {
+.estilo_navdash  .menuDrawer {
     background-color: rgba(164, 52, 255, 0.09);
 }
 
-.listaDrawer {
+.menuDrawer .listaDrawer {
     background-color: #0D0117;
     height: 100vh;
     width: 250px;
