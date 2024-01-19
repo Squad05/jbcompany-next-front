@@ -11,7 +11,6 @@ const login = async (email, senha) => {
       "https://jbcompanyapi.onrender.com/auth/logar",
       dados
     );
-    console.log(response);
 
     if (response.data) {
       const { token } = response.data;

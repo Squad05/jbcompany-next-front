@@ -1,6 +1,6 @@
 .estilo_navdash {
     background-color: #0D0117;
-    padding: 18px 10px;
+    padding: 16px 10px;
     width: 100%;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .menuDrawer {
-    background-color: #0d011708;
+    background-color: rgba(164, 52, 255, 0.09);
 }
 
 .listaDrawer {
@@ -52,8 +52,9 @@
 
 .containericon  {
     color: white;
-    background-color: transparent;
+    background-color: transparent !important;
     font-size: 28px;
+    
 }
 
 .nomeItemLista span {

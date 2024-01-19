@@ -1,0 +1,27 @@
+.container {
+    margin: 15px 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #0D0117;
+  }
+  
+  
+  .estilo_tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  .estilo_tabela  th,   .estilo_tabela td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .estilo_tabela  th {
+    background-color: #0D0117;
+    color: white;
+
+
+  }
+  
