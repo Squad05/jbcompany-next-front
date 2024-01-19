@@ -28,6 +28,7 @@ export default function FormualarioVagas() {
       funcao,
       status_vaga: statusVaga,
       salario,
+      
     };
 
     console.log(dados);

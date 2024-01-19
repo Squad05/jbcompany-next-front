@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Box, Card, CardContent, Container, Divider, Grid, Typography } from '@mui/material';
-import Vagas from '@/data/dataVagas';
+import {
+    Box,
+    Card,
+    CardContent,
+    Container,
+    Divider,
+    Grid,
+    Typography,
+    Button,
+} from '@mui/material';
+import VagaService from '@/services/VagaService';
+import { extrairEmailDoToken } from '@/services/auth/EmailToken';
 
 const VagaCard = ({ vaga }) => {
+    const handleEdit = () => {
+        console.log(`Editar vaga: ${vaga.descricao}`);
+    };
+
+    const handleDelete = () => {
+        console.log(`Excluir vaga: ${vaga.descricao}`);
+    };
+
     return (
         <Card
             sx={{
@@ -37,6 +55,15 @@ const VagaCard = ({ vaga }) => {
                 <Typography variant="body2" color="textSecondary">
                     Salário: R${vaga.salario}
                 </Typography>
+
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: 2 }}>
+                    <Button variant="outlined" color="primary" onClick={handleEdit}>
+                        Editar
+                    </Button>
+                    <Button variant="outlined" color="error" onClick={handleDelete}>
+                        Excluir
+                    </Button>
+                </Box>
             </CardContent>
             <Box sx={{ flexGrow: 1 }} />
         </Card>
@@ -55,10 +82,31 @@ VagaCard.propTypes = {
 };
 
 const VagaCardList = () => {
+    const [vagas, setVagas] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+
+                const userToken = localStorage.getItem("token");
+
+                const userEmail = extrairEmailDoToken(userToken);
+
+
+                const listaVagas = await VagaService.listarVagasPorEmpresa(userEmail, userToken);
+                setVagas(listaVagas);
+            } catch (error) {
+                console.error('Erro ao buscar vagas:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <Container maxWidth="lg">
-            <Grid container spacing={4} >
-                {Vagas.map((vaga, index) => (
+            <Grid container spacing={4}>
+                {vagas.map((vaga, index) => (
                     <Grid item key={index}>
                         <VagaCard vaga={vaga} />
                     </Grid>

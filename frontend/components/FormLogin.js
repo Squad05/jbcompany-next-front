@@ -9,6 +9,7 @@ import {
   Input,
   Button,
   Typography,
+  Grid
 } from "@mui/material";
 
 export default function FormLogin() {
@@ -22,6 +23,7 @@ export default function FormLogin() {
 
     try {
       const token = await login(email, senha);
+      localStorage.setItem("token", token);
       router.push("/dashboard/vagas");
     } catch (erro) {
       setErrorMensagem(erro.message);
@@ -29,7 +31,7 @@ export default function FormLogin() {
   };
 
   return (
-    <form className={styles.formulario_container} onSubmit={handleSubmit}>
+    <form style={{margin: 'auto'}} className={styles.formulario_container} onSubmit={handleSubmit}>
       <Typography variant="h1" component="h1">
         Login
       </Typography>
