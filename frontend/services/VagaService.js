@@ -30,6 +30,24 @@ class VagaService {
       throw error;
     }
   }
+
+  async deletarVagas(id, token) {
+    try {
+      const headers = {
+        Authorization: `Bearer ${token}`,
+      };
+
+
+      const response = await axios.delete(`https://jbcompanyapi.onrender.com/vagas/${id}`, { headers });
+      if (response.status === 204) {
+        window.location.reload();
+      }
+      return response.data;
+    } catch (error) {
+      console.error(`Erro ao deletar vaga com o ID ${id}:`, error);
+      throw error;
+    }
+  }
 }
 
 export default new VagaService();

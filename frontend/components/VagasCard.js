@@ -18,9 +18,16 @@ const VagaCard = ({ vaga }) => {
         console.log(`Editar vaga: ${vaga.descricao}`);
     };
 
-    const handleDelete = () => {
-        console.log(`Excluir vaga: ${vaga.descricao}`);
-    };
+    const handleDelete = async () => {
+        try {
+          const userToken = localStorage.getItem('token');
+          await VagaService.deletarVagas(vaga.id, userToken);
+          onDeleteSuccess();  
+        } catch (error) {
+          console.error(`Erro ao excluir vaga: ${error.message}`);
+        }
+      };
+
 
     return (
         <Card
@@ -72,6 +79,7 @@ const VagaCard = ({ vaga }) => {
 
 VagaCard.propTypes = {
     vaga: PropTypes.shape({
+        id: PropTypes.number.isRequired,
         descricao: PropTypes.string.isRequired,
         cep: PropTypes.string.isRequired,
         localizacao: PropTypes.string.isRequired,
@@ -79,6 +87,7 @@ VagaCard.propTypes = {
         status_vaga: PropTypes.bool.isRequired,
         salario: PropTypes.number.isRequired,
     }).isRequired,
+    onDelete: PropTypes.func.isRequired,
 };
 
 const VagaCardList = () => {
@@ -92,7 +101,6 @@ const VagaCardList = () => {
 
                 const userEmail = extrairEmailDoToken(userToken);
 
-
                 const listaVagas = await VagaService.listarVagasPorEmpresa(userEmail, userToken);
                 setVagas(listaVagas);
             } catch (error) {
@@ -103,12 +111,17 @@ const VagaCardList = () => {
         fetchData();
     }, []);
 
+    const handleDeleteVaga = (vagaId) => {
+        setVagas((prevVagas) => prevVagas.filter((vaga) => vaga.id !== vagaId));
+      };
+
+
     return (
         <Container maxWidth="lg">
             <Grid container spacing={4}>
                 {vagas.map((vaga, index) => (
                     <Grid item key={index}>
-                        <VagaCard vaga={vaga} />
+                         <VagaCard vaga={vaga} onDelete={handleDeleteVaga} />
                     </Grid>
                 ))}
             </Grid>
