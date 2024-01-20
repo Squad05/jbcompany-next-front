@@ -1,5 +1,5 @@
 .navBar {
-    background-color: #0D0117  !important;
+    background-color: #0D0117 !important;
     padding: 20px;
     display: flex;
 }
@@ -10,7 +10,7 @@
 }
 
 .navBar a:hover {
-    color:#B378FF;
+    color: #B378FF;
     background-color: transparent;
 }
 
@@ -21,7 +21,7 @@
 
 .navBar .botaoEstilo {
     background-color: #B378FF;
-    color:white;
+    color: white;
     border: none;
     padding: 8px 22px;
     text-decoration: none;
@@ -32,13 +32,40 @@
 
 .navBar .botaoEstilo:hover {
     background-color: white !important;
-    color:#B378FF;
+    color: #B378FF;
 }
 
-.item_logout  {
+.item_logout {
     background-color: white !important;
 
-    color:#B378FF;
+    color: #B378FF;
 
 }
 
+.menuDrawer .listaDrawer {
+    background-color: #0D0117;
+    height: 100vh;
+    width: 250px;
+    padding: 15px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.nomeItemLista {
+    color: white;
+    font-size: 28px;
+    
+}
+
+.container_nome {
+    gap: 15px;
+    cursor: pointer;
+
+}
+
+.container_nome:hover {
+   background-color: #B378FF;
+
+}
