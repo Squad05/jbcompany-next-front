@@ -60,7 +60,7 @@ const CardsHome = () => {
                       </span>
                     </Typography>
                     <Typography className={styles.texto_card}>
-                      Vagas Aplicadas{" "}
+                      Candidatas{" "}
                       <span className={styles.texto_valor}>
                         {projeto.aplicada}
                       </span>
@@ -76,7 +76,7 @@ const CardsHome = () => {
                       </span>
                     </Typography>
                     <Typography className={styles.texto_card}>
-                      Pessoas Cursando
+                       Cursando
                       <span className={styles.texto_valor}>
                         {projeto.cursando}
                       </span>

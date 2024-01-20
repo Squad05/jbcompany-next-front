@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Box, Card, CardContent, Container, Divider, Grid, Typography } from '@mui/material';
-import Cursos from '@/data/dataCursos';
+import CursoService from '@/services/CursoService';
+import { extrairEmailDoToken } from '@/services/auth/EmailToken';
 
 const CursoCard = ({ curso }) => {
     return (
@@ -10,8 +11,6 @@ const CursoCard = ({ curso }) => {
                 display: 'flex',
                 flexDirection: 'column',
                 height: '100%',
-            
-               
             }}
         >
             <CardContent>
@@ -42,10 +41,28 @@ CursoCard.propTypes = {
 };
 
 const CursoCardList = () => {
+    const [cursos, setCursos] = useState([]);
+
+    useEffect(() => {
+        const fetchCursos = async () => {
+            try {
+                const userToken = localStorage.getItem("token");
+                
+                const cursosData = await CursoService.listarCursos(userToken);
+                setCursos(cursosData);
+            } catch (error) {
+                
+                console.error("Erro ao listar cursos:", error);
+            }
+        };
+
+        fetchCursos();
+    }, []);
+
     return (
         <Container maxWidth="lg">
             <Grid container spacing={4}>
-                {Cursos.map((curso, index) => (
+                {cursos.map((curso, index) => (
                     <Grid item xs={12} sm={6} md={6} key={index}>
                         <CursoCard curso={curso} />
                     </Grid>
