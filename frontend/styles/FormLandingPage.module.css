@@ -1,41 +1,97 @@
-.estilo_pagina {
-  background-color: #0D0117;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 
-.formulario_container {
-  background-color: white;
+.container {
   width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #0D0117;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
-  border: 2px solid #B378FF; 
-  box-shadow: 0px 0px 20px rgba(2, 0, 102, 0.56); 
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out; 
 }
 
-.formulario_container h1 {
-  font-size: 40px;
-  text-transform: uppercase;
+.container_header {
+  width: 80%;
+}
+
+.container_footer {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container_footer h4 {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+
+.container_footer .linkespecial {
   color: #B378FF;
+
+}
+
+.container_header h2 {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.container_header h4 {
+  font-size: 23px;
+  color: #ffffff;
+}
+
+.container_header .textoespecial {
+  color: #B378FF;
+}
+
+
+.formulario_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out; 
+  gap:10px;
+}
+
+.formulario_container h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.formulario_container .textoespecial {
+  font-weight: 600;
+  color: #B378FF;
+}
+
+.formulario_formcontrol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario_container .formulario_input_label {
+  text-align: left;
+  color: white;
+}
+
+.formulario_container .formulario_formcontrol  .formulario_input {
+  width: 80%;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: white;
 }
 
 .formulario_container button {
   background-color: #B378FF;
   color: white;
-  padding: 10px 20px;
+  width: 80%;
+  padding: 5px;
   font-size: 18px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out; 
 }

@@ -1,0 +1,40 @@
+.divlateral {
+    width: 60%;
+    min-height: 100vh;
+    background-color: white;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.divlateral .header_div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 60px;
+
+}
+
+.imgdiv {
+    width: 460px;
+    height: auto;
+}
+
+
+.header_div .linkHome {
+    background-color: #B378FF;
+    padding: 15px 35px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+
+.header_div .linkHome:hover {
+    background-color:  #0D0117;
+    color: white;
+}
+
