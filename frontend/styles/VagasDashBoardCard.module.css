@@ -1,0 +1,42 @@
+.estilo_card {
+    background-color: rgb(250, 246, 255);
+    min-width: 350px;
+}
+
+.estilo_card_header {
+    background-color:  #0D0117;
+}
+
+.estilo_card_header .estilo_header_titulo  {
+   font-size: 20px;
+   color: white;
+   text-align: center;
+}
+
+.estilo_funcao_vaga {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.estilo_valores_vaga {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.card_botao_editar_acoes {
+    background-color:#B378FF;
+    color: white;
+    border: none;
+}
+
+.card_botao_editar_acoes:hover, .card_botao_excluir_acoes:hover {
+    background-color:  #0D0117;
+    color: #B378FF;
+    border: none;
+}
+
+.card_botao_excluir_acoes {
+    background-color:#ff787f;
+    color: #ffffff;
+    border: none;
+}

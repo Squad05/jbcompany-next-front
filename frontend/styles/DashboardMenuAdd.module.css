@@ -1,0 +1,48 @@
+.dashboardMenuContainer {
+    height: auto;
+    padding: 10px ;
+    margin: 10px 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+    justify-content: space-between;
+
+}
+
+.dashboardMenuContainer .estilo_titulo {
+    color: #0D0117;
+    font-size: 37px;
+}
+
+.containerSearch {
+    width: 70%;
+}
+
+.containerSearch .inputSearch {
+    min-width:90%;
+    border-radius: 10px;
+}
+
+
+.containerSearch  .inputSearch:focus  {
+    border: none;
+    outline: none;
+}
+.containerADD {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botaoADD {
+    background-color:#0D0117 ;
+    padding: 13px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.botaoADD:hover {
+    background-color: #B378FF;
+    color: #ffffff;
+}
