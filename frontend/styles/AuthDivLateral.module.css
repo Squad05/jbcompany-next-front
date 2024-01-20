@@ -39,3 +39,8 @@
     border: 1px solid #0d011749;
 }
 
+@media screen and (max-width: 850px) {
+    .divlateral {
+      display: none;
+    }
+  }
