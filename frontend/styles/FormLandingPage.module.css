@@ -27,6 +27,7 @@
 
 .container_footer .linkespecial {
   color: #B378FF;
+  text-decoration: none;
 
 }
 
@@ -83,6 +84,7 @@
   padding: 5px;
   background-color: white;
 }
+
 
 .formulario_container button {
   background-color: #B378FF;

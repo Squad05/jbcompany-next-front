@@ -1,7 +1,7 @@
 .divlateral {
     width: 60%;
     min-height: 100vh;
-    background-color: white;
+    background: linear-gradient(to bottom, #dcc2ff,  #b378ff);
     justify-content: space-evenly;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
 
 
 .header_div .linkHome {
-    background-color: #B378FF;
+    background-color:  #0D0117;
     padding: 15px 35px;
     border-radius: 10px;
     text-decoration: none;
@@ -34,7 +34,8 @@
 }
 
 .header_div .linkHome:hover {
-    background-color:  #0D0117;
+    background-color: #B378FF;
     color: white;
+    border: 1px solid #0d011749;
 }
 

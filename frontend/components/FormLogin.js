@@ -12,7 +12,6 @@ import {
   Typography,
   Grid,
 } from "@mui/material";
-import Logo from "./Logo";
 
 export default function FormLogin() {
   const [senha, setSenha] = useState("");
