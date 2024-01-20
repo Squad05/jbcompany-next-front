@@ -36,16 +36,20 @@ export default function FormualarioVagas() {
       const response = await axios.post(
         "https://jbcompanyapi.onrender.com/vagas",
         dados,
+        
         {
           headers: {
             Authorization: `Bearer ${token}`,
           },
+          
         }
+        
       );
 
       console.log(token);
 
       console.log("response", response);
+      window.location.reload();
     } catch (erro) {
       console.error("Erro ao enviar requisição:", erro.message);
     }
