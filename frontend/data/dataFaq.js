@@ -1,22 +1,44 @@
 const faqData = [
-    {
-        id: 1,
-        faq: 'panel1',
-        pergunta: 'Quais benefícios adicionais sua plataforma oferece para empresas que buscam talentos ou alunos?',
-        resposta: 'Além da publicação de vagas e cursos, fornecemos ferramentas analíticas para rastrear o desempenho das postagens, opções de destaque para aumentar a visibilidade e a capacidade de personalizar a experiência de recrutamento.',
-    },
-    {
-        id: 2,
-        faq: 'panel2',
-        pergunta: 'Como você garante a qualidade das vagas e cursos publicados em seu site?',
-        resposta: 'Implementamos verificações e moderação rigorosas para garantir que apenas oportunidades legítimas e relevantes sejam publicadas. Também incentivamos feedback dos usuários para melhorar continuamente.',
-    },
-    {
-        id: 3,
-        faq: 'panel3',
-        pergunta: 'Qual é a abrangência geográfica de sua plataforma?',
-        resposta: 'Nossa plataforma é global, permitindo que empresas e candidatos de diferentes partes do mundo se conectem. Fornecemos ferramentas de pesquisa avançada para refinar os resultados conforme necessário.',
-    },
+  {
+    id: 1,
+    faq: "panel1",
+    pergunta:
+      "Quais são os benefícios para empresas que desejam recrutar talentos femininos em sua plataforma?",
+    resposta:
+      "Além da visibilidade exclusiva para mulheres, oferecemos ferramentas analíticas para acompanhar o desempenho das postagens, destacando oportunidades e personalizando a experiência de recrutamento.",
+  },
+  {
+    id: 2,
+    faq: "panel2",
+    pergunta:
+      "Como você assegura que as vagas e cursos exclusivos para mulheres em seu site são de alta qualidade e relevância?",
+    resposta:
+      "Implementamos rigorosas verificações e moderação para garantir que apenas oportunidades autênticas e pertinentes para mulheres sejam publicadas. Incentivamos o feedback das usuárias para aprimorar continuamente nossa oferta.",
+  },
+  {
+    id: 3,
+    faq: "panel3",
+    pergunta:
+      "Como funciona a abrangência global da plataforma para conectar mulheres a oportunidades em diferentes partes do mundo?",
+    resposta:
+      "Nossa plataforma é global, proporcionando a mulheres e empresas em diversas regiões a oportunidade de se conectarem. Oferecemos ferramentas de pesquisa avançada para refinar os resultados conforme as necessidades específicas de cada usuária.",
+  },
+  {
+    id: 4,
+    faq: "panel4",
+    pergunta:
+      "Quais são os recursos exclusivos destinados a candidatas que buscam oportunidades exclusivas para mulheres?",
+    resposta:
+      "Além das vagas e cursos exclusivos, oferecemos recursos adicionais, como networking exclusivo, mentorias específicas e eventos direcionados para apoiar o crescimento profissional das usuárias.",
+  },
+  {
+    id: 5,
+    faq: "panel5",
+    pergunta:
+      "Como empresas e candidatas podem se beneficiar da personalização da experiência de recrutamento?",
+    resposta:
+      "A personalização permite que empresas encontrem candidatas alinhadas com sua cultura e valores. Candidatas podem receber oportunidades que correspondam às suas habilidades e objetivos profissionais, resultando em conexões mais significativas.",
+  },
 ];
 
 export default faqData;

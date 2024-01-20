@@ -1,8 +1,8 @@
 .botaoscroll {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255) !important;
     border-radius: 30px;
     animation: pulsar 1s infinite alternate;
-    color:#0D0117;
+    color:#0D0117 !important;
 }
 
 @keyframes pulsar {

@@ -25,11 +25,13 @@
 
   .estilobotao {
     background-color: #B378FF;
+    color:   white;
+
   }
 
   .estilobotao:hover {
-    background-color: white;
-    color:   #0D0117;
+    background-color: #B378FF;
+    color:   white;
   }
   
   .estilo_footer h5 {
