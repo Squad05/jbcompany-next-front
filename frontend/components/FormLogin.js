@@ -7,10 +7,8 @@ import Link from "next/link";
 import {
   FormControl,
   InputLabel,
-  Input,
   Button,
   Typography,
-  Grid,
 } from "@mui/material";
 
 export default function FormLogin() {
@@ -50,8 +48,8 @@ export default function FormLogin() {
           Email
         </InputLabel>
         <FormControl fullWidth className={styles.formulario_formcontrol}>
-          <Input
-            id="email"
+          <input
+            id="email"            
             aria-describedby="Digite seu email"
             className={styles.formulario_input}
             value={email}
@@ -63,7 +61,7 @@ export default function FormLogin() {
           Senha
         </InputLabel>
         <FormControl fullWidth className={styles.formulario_formcontrol}>
-          <Input
+          <input
             id="senha"
             type="password"
             className={styles.formulario_input}

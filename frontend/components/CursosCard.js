@@ -33,45 +33,47 @@ const CursoCard = ({ curso }) => {
   return (
     <Card className={styles.estilo_card}>
       <CardContent className={styles.estilo_card_header}>
-        <Typography className={styles.estilo_card_header_titulo} variant="h5">
+        <Typography className={styles.estilo_header_titulo} variant="h4">
           {curso.materia}
         </Typography>
       </CardContent>
       <Divider />
       <CardContent>
         <Typography variant="body2" color="textSecondary">
-          Descrição do Curso: {curso.descricao}
+          Descrição do Curso:  <span className={styles.estilo_valores_vaga}>{curso.descricao}</span>
         </Typography>
         <Typography variant="body2" color="textSecondary">
-          Duração: {curso.duracao}
+          Duração:  <span className={styles.estilo_valores_vaga}>{curso.duracao}</span>
         </Typography>
+
+        <Box sx={{ flexGrow: 1 }} />
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: 2,
+          }}
+        >
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={handleEdit}
+            className={styles.card_botao_editar_acoes}
+          >
+            Editar
+          </Button>
+          <Button
+            variant="outlined"
+            color="error"
+            onClick={handleDelete}
+            className={styles.card_botao_excluir_acoes}
+          >
+            Excluir
+          </Button>
+        </Box>
       </CardContent>
       <Box sx={{ flexGrow: 1 }} />
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginTop: 2,
-        }}
-      >
-        <Button
-          variant="outlined"
-          color="primary"
-          onClick={handleEdit}
-          className={styles.card_botao_editar_acoes}
-        >
-          Editar
-        </Button>
-        <Button
-          variant="outlined"
-          color="error"
-          onClick={handleDelete}
-          className={styles.card_botao_excluir_acoes}
-        >
-          Excluir
-        </Button>
-      </Box>
-    </Card>
+    </Card >
   );
 };
 

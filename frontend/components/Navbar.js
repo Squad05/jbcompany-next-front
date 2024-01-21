@@ -15,7 +15,7 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 
-const pages = ["Home", "Sobre", "Equipe", "Faq"];
+const pages = ["Home", "Sobre", "Faq"];
 
 export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);

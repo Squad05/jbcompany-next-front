@@ -1,4 +1,3 @@
-import Configuracoes from "@/components/Configuracao";
 import Head from "next/head";
 import { ConfiguracaoUser } from "@/components/ConfiguracaoUser";
 import Menu from "@/components/NavDash";

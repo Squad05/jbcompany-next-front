@@ -81,8 +81,9 @@
 .formulario_container .formulario_formcontrol  .formulario_input {
   width: 80%;
   border-radius: 20px;
-  padding: 5px;
+  padding: 8px;
   background-color: white;
+  outline: none;
 }
 
 

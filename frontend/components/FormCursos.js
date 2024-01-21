@@ -3,11 +3,13 @@ import React, { useState } from "react";
 import {
   FormControl,
   InputLabel,
-  Input,
   Button,
   Typography,
 } from "@mui/material";
 import { useRouter } from "next/router";
+import SchoolIcon from "@mui/icons-material/School";
+
+import styles from "../styles/FormsDashboard.module.css";
 
 export default function FormularioCursos() {
   const [materia, setMateria] = useState("");
@@ -46,15 +48,21 @@ export default function FormularioCursos() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Typography variant="h1" component="h1">
+    <form onSubmit={handleSubmit} className={styles.estiloFormularioDashBoard}>
+      <Typography
+        className={styles.tituloFormulario}
+        variant="h1"
+        component="h1"
+      >
+        <SchoolIcon fontSize="large" style={{ marginRight: 10 }} />
         Formulário de Cursos
       </Typography>
 
-      <FormControl fullWidth>
-        <InputLabel htmlFor="materia">Matéria</InputLabel>
-        <Input
+      <InputLabel htmlFor="materia">Matéria</InputLabel>
+      <FormControl fullWidth className={styles.formControlDashBoard}>
+        <input
           id="materia"
+          className={styles.formControlDashBoardInput}
           aria-describedby="Digite a matéria"
           value={materia}
           onChange={(e) => setMateria(e.target.value)}
@@ -62,10 +70,11 @@ export default function FormularioCursos() {
         />
       </FormControl>
 
-      <FormControl fullWidth>
-        <InputLabel htmlFor="descricao">Descrição</InputLabel>
-        <Input
+      <InputLabel htmlFor="descricao">Descrição</InputLabel>
+      <FormControl fullWidth className={styles.formControlDashBoard}>
+        <input
           id="descricao"
+          className={styles.formControlDashBoardInput}
           aria-describedby="Digite a descrição"
           value={descricao}
           onChange={(e) => setDescricao(e.target.value)}
@@ -73,10 +82,11 @@ export default function FormularioCursos() {
         />
       </FormControl>
 
-      <FormControl fullWidth>
-        <InputLabel htmlFor="duracao">Duração</InputLabel>
-        <Input
+      <InputLabel htmlFor="duracao">Duração</InputLabel>
+      <FormControl fullWidth className={styles.formControlDashBoard}>
+        <input
           id="duracao"
+          className={styles.formControlDashBoardInput}
           aria-describedby="Digite a duração"
           value={duracao}
           onChange={(e) => setDuracao(e.target.value)}

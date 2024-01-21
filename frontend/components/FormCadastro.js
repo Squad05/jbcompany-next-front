@@ -4,8 +4,6 @@ import { useRouter } from "next/router";
 import {
   FormControl,
   InputLabel,
-  Input,
-  FormHelperText,
   Button,
   Typography,
 } from "@mui/material";
@@ -55,7 +53,7 @@ export default function FormCadastro() {
           Nome
         </InputLabel>
         <FormControl fullWidth className={styles.formulario_formcontrol}>
-          <Input
+          <input
             id="nome"
             aria-describedby="Digite seu nome"
             className={styles.formulario_input}
@@ -69,7 +67,7 @@ export default function FormCadastro() {
           Email
         </InputLabel>
         <FormControl fullWidth className={styles.formulario_formcontrol}>
-          <Input
+          <input
             id="email"
             className={styles.formulario_input}
             aria-describedby="Digite seu email"
@@ -83,7 +81,7 @@ export default function FormCadastro() {
           Senha
         </InputLabel>
         <FormControl fullWidth className={styles.formulario_formcontrol}>
-          <Input
+          <input
             id="senha"
             type="password"
             aria-describedby="Digite sua senha"

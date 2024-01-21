@@ -67,7 +67,7 @@ export default function FormularioVagas() {
 
       <InputLabel htmlFor="descricao">Descrição</InputLabel>
       <FormControl fullWidth className={styles.formControlDashBoard}>
-        <Input
+        <input
           id="descricao"
           aria-describedby="Digite a descrição"
           value={descricao}
@@ -79,7 +79,7 @@ export default function FormularioVagas() {
 
       <InputLabel htmlFor="cep">CEP</InputLabel>
       <FormControl fullWidth className={styles.formControlDashBoard}>
-        <Input
+        <input
           id="cep"
           aria-describedby="Digite o CEP"
           value={cep}
@@ -91,7 +91,7 @@ export default function FormularioVagas() {
 
       <InputLabel htmlFor="localizacao">Localização</InputLabel>
       <FormControl fullWidth className={styles.formControlDashBoard}>
-        <Input
+        <input
           id="localizacao"
           aria-describedby="Digite a localização"
           value={localizacao}
@@ -103,7 +103,7 @@ export default function FormularioVagas() {
 
       <InputLabel htmlFor="funcao">Função</InputLabel>
       <FormControl fullWidth>
-        <Input
+        <input
           id="funcao"
           aria-describedby="Digite a função"
           value={funcao}
@@ -115,21 +115,22 @@ export default function FormularioVagas() {
 
       <InputLabel id="statusVaga-label">Status da Vaga</InputLabel>
       <FormControl fullWidth>
-        <Select
+        <select
           labelId="statusVaga-label"
           id="statusVaga"
+          className={styles.formControlDashBoardInput}
           value={statusVaga}
           onChange={(e) => setStatusVaga(e.target.value)}
           required
         >
-          <MenuItem value="true">Ativa</MenuItem>
-          <MenuItem value="false">Não Ativa</MenuItem>
-        </Select>
+          <option value="true">Ativa</option>
+          <option value="false">Não Ativa</option>
+        </select>
       </FormControl>
 
       <InputLabel htmlFor="salario">Salário</InputLabel>
       <FormControl fullWidth>
-        <Input
+        <input
           id="salario"
           type="number"
           aria-describedby="Digite o salário"
