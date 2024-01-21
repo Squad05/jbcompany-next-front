@@ -1,6 +1,27 @@
 import axios from "axios";
 
 class CursoService {
+  
+  async cadastrarCursos(curso, token) {
+    try {
+      const headers = {
+        Authorization: `Bearer ${token}`,
+      };
+
+      const response = await axios.post(
+        "https://jbcompanyapi.onrender.com/cursos",
+        curso,
+        { headers }
+      );
+
+      return response.data;
+    } catch (error) {
+      console.error("Erro ao cadastrar novo curso:", error);
+      throw error;
+    }
+  }
+
+
   async listarCursos() {
     try {
       const response = await axios.get(

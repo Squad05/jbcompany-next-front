@@ -2,17 +2,15 @@ import axios from "axios";
 import React, { useState } from "react";
 import styles from "../styles/FormsDashboard.module.css";
 import WorkIcon from "@mui/icons-material/Work";
+import { useRouter } from "next/router";
+import VagaService from "@/services/VagaService";
 
 import {
   FormControl,
   InputLabel,
-  Select,
-  MenuItem,
-  Input,
   Button,
   Typography,
 } from "@mui/material";
-import { useRouter } from "next/router";
 
 export default function FormularioVagas() {
   const [descricao, setDescricao] = useState("");
@@ -38,16 +36,7 @@ export default function FormularioVagas() {
     };
 
     try {
-      const response = await axios.post(
-        "https://jbcompanyapi.onrender.com/vagas",
-        dados,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
+      const response = await VagaService.cadastrarVagas(dados, token);
       router.push("/dashboard/vagas");
     } catch (erro) {
       console.error("Erro ao enviar requisição:", erro.message);

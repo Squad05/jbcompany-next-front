@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import {
   FormControl,
@@ -8,8 +7,8 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import SchoolIcon from "@mui/icons-material/School";
-
 import styles from "../styles/FormsDashboard.module.css";
+import CursoService from "@/services/CursoService";
 
 export default function FormularioCursos() {
   const [materia, setMateria] = useState("");
@@ -22,25 +21,17 @@ export default function FormularioCursos() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const dados = {
+    const curso = {
       materia,
       descricao,
       duracao,
     };
 
     try {
-      const response = await axios.post(
-        "https://jbcompanyapi.onrender.com/cursos",
-        dados,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await CursoService.cadastrarCursos(curso, token);
 
       console.log("response", response);
-      
+
       router.push('/dashboard/cursos');
     } catch (erro) {
       console.error("Erro ao enviar requisição:", erro.message);
