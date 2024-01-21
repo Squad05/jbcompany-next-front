@@ -5,6 +5,8 @@ import CardsHome from "@/components/CardsHome";
 import TabelaUltimasVagasLancadas from "@/components/TabelaUltimasVagasLancadas";
 import styles from "../../../styles/Dashboard.module.css";
 import TabelaUltimosCursosLancados from "@/components/TabelaUltimosCursosLancados";
+
+
 const Home = () => {
   const { autenticado } = useAuth();
 
