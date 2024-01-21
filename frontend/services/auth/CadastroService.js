@@ -6,8 +6,10 @@ const cadastrar = async (nome, email, senha) => {
       nome,
       email,
       senha,
+      cargo: "USER",
     };
 
+    console.log(dados);
     const response = await axios.post(
       "https://jbcompanyapi.onrender.com/auth/cadastrar",
       dados
