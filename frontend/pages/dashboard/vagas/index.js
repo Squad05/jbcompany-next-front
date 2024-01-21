@@ -13,7 +13,11 @@ export default function Vagas() {
       </Head>
       <Menu />
       <main className={styles.estilo_container_main}>
-        <DashboardMenuAdd/>
+        <DashboardMenuAdd
+          titulo={"Vagas lançadas"}
+          linkRota={"/dashboard/vagas/add"}
+          textoLink={"Adicionar"}
+        />
         <VagaCardList />
       </main>
     </div>

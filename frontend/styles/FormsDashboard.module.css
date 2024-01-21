@@ -1,0 +1,39 @@
+.estiloFormularioDashBoard {
+    margin: 30px 80px;
+    border-radius: 2px;
+    padding: 30px;
+    background-color: #fff; 
+    border: 1px solid #0D0117;
+}
+
+
+.estiloFormularioDashBoard .tituloFormulario {
+    font-size: 30px;
+    color: #0D0117;
+    margin-bottom: 20px;
+}
+.estiloFormularioDashBoard label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0D0117;
+}
+
+
+.estiloFormularioDashBoard .formControlDashBoardInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.estiloFormularioDashBoard button {
+    background-color: #0D0117;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    padding: 10px 25px;
+}
+
+.estiloFormularioDashBoard button:hover {
+    background-color: #B378FF;
+}

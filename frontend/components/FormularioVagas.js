@@ -1,5 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
+import styles from "../styles/FormsDashboard.module.css";
+import WorkIcon from "@mui/icons-material/Work";
+
 import {
   FormControl,
   InputLabel,
@@ -11,13 +14,12 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 
-
 export default function FormularioVagas() {
   const [descricao, setDescricao] = useState("");
   const [cep, setCep] = useState("");
   const [localizacao, setLocalizacao] = useState("");
   const [funcao, setFuncao] = useState("");
-  const [statusVaga, setStatusVaga] = useState(""); 
+  const [statusVaga, setStatusVaga] = useState("");
   const [salario, setSalario] = useState("");
 
   const token = localStorage.getItem("token");
@@ -46,66 +48,73 @@ export default function FormularioVagas() {
         }
       );
 
-      console.log("response", response);
-
-      router.push('/dashboard/vagas');
+      router.push("/dashboard/vagas");
     } catch (erro) {
       console.error("Erro ao enviar requisição:", erro.message);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Typography variant="h1" component="h1">
-        Formulário
+    <form onSubmit={handleSubmit} className={styles.estiloFormularioDashBoard}>
+      <Typography
+        className={styles.tituloFormulario}
+        variant="h1"
+        component="h1"
+      >
+        <WorkIcon fontSize="large" style={{ marginRight: 10 }} />
+        Inserir Vagas
       </Typography>
 
-      <FormControl fullWidth>
-        <InputLabel htmlFor="descricao">Descrição</InputLabel>
+      <InputLabel htmlFor="descricao">Descrição</InputLabel>
+      <FormControl fullWidth className={styles.formControlDashBoard}>
         <Input
           id="descricao"
           aria-describedby="Digite a descrição"
           value={descricao}
+          className={styles.formControlDashBoardInput}
           onChange={(e) => setDescricao(e.target.value)}
           required
         />
       </FormControl>
 
-      <FormControl fullWidth>
-        <InputLabel htmlFor="cep">CEP</InputLabel>
+      <InputLabel htmlFor="cep">CEP</InputLabel>
+      <FormControl fullWidth className={styles.formControlDashBoard}>
         <Input
           id="cep"
           aria-describedby="Digite o CEP"
           value={cep}
+          className={styles.formControlDashBoardInput}
           onChange={(e) => setCep(e.target.value)}
           required
         />
       </FormControl>
 
-      <FormControl fullWidth>
-        <InputLabel htmlFor="localizacao">Localização</InputLabel>
+      <InputLabel htmlFor="localizacao">Localização</InputLabel>
+      <FormControl fullWidth className={styles.formControlDashBoard}>
         <Input
           id="localizacao"
           aria-describedby="Digite a localização"
           value={localizacao}
+          className={styles.formControlDashBoardInput}
           onChange={(e) => setLocalizacao(e.target.value)}
           required
         />
       </FormControl>
 
+      <InputLabel htmlFor="funcao">Função</InputLabel>
       <FormControl fullWidth>
-        <InputLabel htmlFor="funcao">Função</InputLabel>
         <Input
           id="funcao"
           aria-describedby="Digite a função"
           value={funcao}
+          className={styles.formControlDashBoardInput}
           onChange={(e) => setFuncao(e.target.value)}
           required
         />
       </FormControl>
 
+      <InputLabel id="statusVaga-label">Status da Vaga</InputLabel>
       <FormControl fullWidth>
-        <InputLabel id="statusVaga-label">Status da Vaga</InputLabel>
         <Select
           labelId="statusVaga-label"
           id="statusVaga"
@@ -113,18 +122,19 @@ export default function FormularioVagas() {
           onChange={(e) => setStatusVaga(e.target.value)}
           required
         >
-          <MenuItem value="Ativa">Ativa</MenuItem>
-          <MenuItem value="Não Ativa">Não Ativa</MenuItem>
+          <MenuItem value="true">Ativa</MenuItem>
+          <MenuItem value="false">Não Ativa</MenuItem>
         </Select>
       </FormControl>
 
+      <InputLabel htmlFor="salario">Salário</InputLabel>
       <FormControl fullWidth>
-        <InputLabel htmlFor="salario">Salário</InputLabel>
         <Input
           id="salario"
           type="number"
           aria-describedby="Digite o salário"
           value={salario}
+          className={styles.formControlDashBoardInput}
           onChange={(e) => setSalario(Number(e.target.value))}
           required
         />
@@ -136,7 +146,7 @@ export default function FormularioVagas() {
         style={{ marginTop: 20 }}
         type="submit"
       >
-        Enviar
+        Cadastrar
       </Button>
     </form>
   );
