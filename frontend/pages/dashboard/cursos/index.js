@@ -1,7 +1,11 @@
 import CursoCardList from "@/components/CursosCard";
+import DashboardMenuAdd from "@/components/DashboardMenuAdd";
 import FormularioCursos from "@/components/FormCursos";
 import Menu from "@/components/NavDash";
 import Head from "next/head";
+import styles from "../../../styles/Dashboard.module.css";
+
+
 
 export default function Cursos() {
   return (
@@ -10,8 +14,11 @@ export default function Cursos() {
         <title> Jb Company</title>
       </Head>
       <Menu />
-      <CursoCardList />
-      <FormularioCursos />
+      <main className={styles.estilo_container_main}>
+        <DashboardMenuAdd />
+        <CursoCardList />
+      </main>
+
     </div>
   );
 }

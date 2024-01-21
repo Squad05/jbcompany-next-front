@@ -3,20 +3,25 @@ import React, { useState } from "react";
 import {
   FormControl,
   InputLabel,
+  Select,
+  MenuItem,
   Input,
   Button,
   Typography,
 } from "@mui/material";
+import { useRouter } from "next/router";
 
-export default function FormualarioVagas() {
+
+export default function FormularioVagas() {
   const [descricao, setDescricao] = useState("");
   const [cep, setCep] = useState("");
   const [localizacao, setLocalizacao] = useState("");
   const [funcao, setFuncao] = useState("");
-  const [statusVaga, setStatusVaga] = useState(false);
-  const [salario, setSalario] = useState();
+  const [statusVaga, setStatusVaga] = useState(""); 
+  const [salario, setSalario] = useState("");
 
   const token = localStorage.getItem("token");
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,28 +33,22 @@ export default function FormualarioVagas() {
       funcao,
       status_vaga: statusVaga,
       salario,
-      
     };
 
-    console.log(dados);
     try {
       const response = await axios.post(
         "https://jbcompanyapi.onrender.com/vagas",
         dados,
-        
         {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-          
         }
-        
       );
 
-      console.log(token);
-
       console.log("response", response);
-      window.location.reload();
+
+      router.push('/dashboard/vagas');
     } catch (erro) {
       console.error("Erro ao enviar requisição:", erro.message);
     }
@@ -58,7 +57,7 @@ export default function FormualarioVagas() {
   return (
     <form onSubmit={handleSubmit}>
       <Typography variant="h1" component="h1">
-        Formulario
+        Formulário
       </Typography>
 
       <FormControl fullWidth>
@@ -106,13 +105,17 @@ export default function FormualarioVagas() {
       </FormControl>
 
       <FormControl fullWidth>
-        <InputLabel htmlFor="statusVaga">Status da Vaga</InputLabel>
-        <Input
+        <InputLabel id="statusVaga-label">Status da Vaga</InputLabel>
+        <Select
+          labelId="statusVaga-label"
           id="statusVaga"
-          type="checkbox"
-          checked={statusVaga}
-          onChange={(e) => setStatusVaga(e.target.checked)}
-        />
+          value={statusVaga}
+          onChange={(e) => setStatusVaga(e.target.value)}
+          required
+        >
+          <MenuItem value="Ativa">Ativa</MenuItem>
+          <MenuItem value="Não Ativa">Não Ativa</MenuItem>
+        </Select>
       </FormControl>
 
       <FormControl fullWidth>

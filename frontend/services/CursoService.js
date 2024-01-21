@@ -21,7 +21,7 @@ class CursoService {
                 Authorization: `Bearer ${token}`,
             };
             const response = await axios.get(
-                `https://jbcompanyapi.onrender.com/cursos/${id}`, { headers }
+                `https://jbcompanyapi.onrender.com/cursos/listar${id}`, { headers }
             );
             return response.data;
         } catch (error) {

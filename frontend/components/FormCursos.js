@@ -7,6 +7,7 @@ import {
   Button,
   Typography,
 } from "@mui/material";
+import { useRouter } from "next/router";
 
 export default function FormularioCursos() {
   const [materia, setMateria] = useState("");
@@ -14,6 +15,7 @@ export default function FormularioCursos() {
   const [duracao, setDuracao] = useState("");
 
   const token = localStorage.getItem("token");
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,8 +26,6 @@ export default function FormularioCursos() {
       duracao,
     };
 
-    console.log(dados);
-    
     try {
       const response = await axios.post(
         "https://jbcompanyapi.onrender.com/cursos",
@@ -38,10 +38,10 @@ export default function FormularioCursos() {
       );
 
       console.log("response", response);
-      // Realize as ações necessárias após o envio bem-sucedido, se houver.
+      
+      router.push('/dashboard/cursos');
     } catch (erro) {
       console.error("Erro ao enviar requisição:", erro.message);
-      // Trate o erro conforme necessário.
     }
   };
 
