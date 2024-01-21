@@ -5,6 +5,8 @@ import CardsHome from "@/components/CardsHome";
 import TabelaUltimasVagasLancadas from "@/components/TabelaUltimasVagasLancadas";
 import styles from "../../../styles/Dashboard.module.css";
 import TabelaUltimosCursosLancados from "@/components/TabelaUltimosCursosLancados";
+import MensagemBoasVindas from "@/components/MensagemBoasVindas";
+
 const Home = () => {
   const { autenticado } = useAuth();
 
@@ -19,7 +21,7 @@ const Home = () => {
       </Head>{" "}
       <Menu />
       <main className={styles.estilo_container_main}>
-        <h1 className={styles.estilo_titulo_sessao}> Bem vindo(a) </h1>
+        <MensagemBoasVindas />
         <CardsHome />
         <h2 className={styles.estilo_titulo_sessao}>
           {" "}
