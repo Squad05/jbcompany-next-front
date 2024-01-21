@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
@@ -8,20 +8,65 @@ import Avatar from "@mui/material/Avatar";
 import WorkIcon from "@mui/icons-material/Work";
 import SchoolIcon from "@mui/icons-material/School";
 import PeopleIcon from "@mui/icons-material/People";
-
+import VagaService from "@/services/VagaService";
+import { extrairEmailDoToken } from "@/services/auth/EmailToken";
 import styles from "../styles/CardsDashBoardHome.module.css";
+import CursoService from "@/services/CursoService";
 
 const CardsHome = () => {
+  const [vagasPostadas, setVagasPostadas] = useState(0);
+  const [cursosPostados, setCursosPostados] = useState(0);
+
+  useEffect(() => {
+    async function fetchVagasPostadas() {
+      try {
+        const userToken = localStorage.getItem("token");
+        const userEmail = extrairEmailDoToken(userToken);
+
+        const vagasDoUsuario = await VagaService.listarVagasPorEmpresa(
+          userEmail,
+          userToken
+        );
+
+        setVagasPostadas(vagasDoUsuario.length);
+      } catch (error) {
+        console.error("Erro ao obter vagas do usuário:", error);
+      }
+    }
+
+    fetchVagasPostadas();
+  }, []);
+
+  useEffect(() => {
+    async function fetchCursosPostados() {
+      try {
+        const userToken = localStorage.getItem("token");
+        const userEmail = extrairEmailDoToken(userToken);
+
+        const cursosDoUsuario = await CursoService.listarCursosPorEmpresa(
+          userEmail,
+          userToken
+        );
+
+        setCursosPostados(cursosDoUsuario.length);
+      } catch (error) {
+        console.error("Erro ao obter cursos do usuário:", error);
+      }
+    }
+
+    fetchCursosPostados();  
+  }, []);
+
   const projetos = [
     {
       titulo: "Vagas",
-      postada: 10,
+      postada: vagasPostadas,
       aplicada: 5,
       icon: <WorkIcon />,
     },
     {
       titulo: "Cursos",
-      postada: 5,
+      postada: cursosPostados,
       cursando: 15,
       icon: <SchoolIcon />,
     },
@@ -76,7 +121,7 @@ const CardsHome = () => {
                       </span>
                     </Typography>
                     <Typography className={styles.texto_card}>
-                       Cursando
+                      Cursando
                       <span className={styles.texto_valor}>
                         {projeto.cursando}
                       </span>

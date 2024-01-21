@@ -1,11 +1,18 @@
 import Head from "next/head";
 import VagaCardList from "@/components/VagasCard";
 import Menu from "@/components/NavDash";
-import { extrairIdDoToken } from "@/services/auth/EmailToken";
 import styles from "../../../styles/Dashboard.module.css";
 import DashboardMenuAdd from "@/components/DashboardMenuAdd";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function Vagas() {
+  const { autenticado } = useAuth();
+
+  if (!autenticado) {
+    return null;
+  }
+
+
   return (
     <div>
       <Head>
