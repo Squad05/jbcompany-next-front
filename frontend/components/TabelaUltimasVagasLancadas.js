@@ -17,7 +17,7 @@ export default function TabelaUltimasVagasLancadas() {
           userToken
         );
 
-        const ultimasCincoVagas = vagasDoUsuario.slice(0, 5);
+        const ultimasCincoVagas = vagasDoUsuario.slice(-5);
         setVagas(ultimasCincoVagas);
       } catch (error) {
         console.error("Erro ao obter vagas do usuário:", error);
