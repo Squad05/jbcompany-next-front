@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import {
   Box,
   Card,
@@ -9,11 +9,10 @@ import {
   Grid,
   Typography,
   Button,
-} from '@mui/material';
-import CursoService from '@/services/CursoService';
+} from "@mui/material";
+import CursoService from "@/services/CursoService";
 import styles from "../styles/VagasDashBoardCard.module.css";
-import { extrairEmailDoToken } from '@/services/auth/EmailToken';
-
+import { extrairEmailDoToken } from "@/services/auth/EmailToken";
 
 const CursoCard = ({ curso }) => {
   const handleEdit = () => {
@@ -22,7 +21,7 @@ const CursoCard = ({ curso }) => {
 
   const handleDelete = async () => {
     try {
-      const userToken = localStorage.getItem('token');
+      const userToken = localStorage.getItem("token");
       await CursoService.deletarCursos(curso.id, userToken);
       onDeleteSuccess();
       console.log(`Excluir curso: ${curso.materia}`);
@@ -32,7 +31,7 @@ const CursoCard = ({ curso }) => {
   };
 
   return (
-    <Card className={styles.estilo_card} >
+    <Card className={styles.estilo_card}>
       <CardContent className={styles.estilo_card_header}>
         <Typography className={styles.estilo_card_header_titulo} variant="h5">
           {curso.materia}
@@ -50,8 +49,8 @@ const CursoCard = ({ curso }) => {
       <Box sx={{ flexGrow: 1 }} />
       <Box
         sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
+          display: "flex",
+          justifyContent: "space-between",
           marginTop: 2,
         }}
       >
@@ -90,14 +89,18 @@ const CursoCardList = () => {
   useEffect(() => {
     const fetchCursos = async () => {
       try {
-        const userToken = localStorage.getItem('token');
+        const userToken = localStorage.getItem("token");
 
         const userEmail = extrairEmailDoToken(userToken);
-        
-        const listaCursos = await CursoService.listarCursosPorEmpresa(userEmail, userToken);
+
+        const listaCursos = await CursoService.listarCursosPorEmpresa(
+          userEmail,
+          userToken
+        );
+
         setCursos(listaCursos);
       } catch (error) {
-        console.error('Erro ao listar cursos:', error);
+        console.error("Erro ao listar cursos:", error);
       }
     };
 
