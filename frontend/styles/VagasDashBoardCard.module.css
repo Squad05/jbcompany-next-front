@@ -1,16 +1,27 @@
 .estilo_card {
     background-color: rgb(250, 246, 255);
     min-width: 350px;
+    min-height: 250px; 
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .estilo_card_header {
-    background-color:  #0D0117;
+    background-color: #0D0117;
+    padding: 10px; 
 }
 
-.estilo_card_header .estilo_header_titulo  {
-   font-size: 20px;
-   color: white;
-   text-align: center;
+.estilo_card_header .estilo_header_titulo {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.estilo_card_content {
+    padding: 10px; 
 }
 
 .estilo_funcao_vaga {
@@ -23,20 +34,22 @@
     font-size: 15px;
 }
 
-.card_botao_editar_acoes {
-    background-color:#B378FF;
-    color: white;
+.card_botao_editar_acoes,
+.card_botao_excluir_acoes {
     border: none;
+    cursor: pointer;
+    position: absolute;
+    
 }
 
-.card_botao_editar_acoes:hover, .card_botao_excluir_acoes:hover {
-    background-color:  #0D0117;
-    color: #B378FF;
-    border: none;
+.card_botao_editar_acoes {
+    left: 10px;
+    background-color: #B378FF;
+    color: white;
 }
 
 .card_botao_excluir_acoes {
-    background-color:#ff787f;
+    right: 10px;
+    background-color: #ff787f;
     color: #ffffff;
-    border: none;
 }
