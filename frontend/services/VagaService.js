@@ -65,7 +65,7 @@ class VagaService {
 
       return response.data;
     } catch (error) {
-      console.log("Erro ao buscar detalhes de Vagas", error);
+      console.log("Erro ao buscar detalhes de Vaga", error);
       throw error;
     }
 

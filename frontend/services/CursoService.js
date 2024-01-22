@@ -1,7 +1,7 @@
 import axios from "axios";
 
 class CursoService {
-  
+
   async cadastrarCursos(curso, token) {
     try {
       const headers = {
@@ -49,6 +49,26 @@ class CursoService {
       throw error;
     }
   }
+
+  
+  async atualizarCurso(id, token, valores) {
+    try {
+      const headers = {
+        Authorization: `Bearer ${token}`,
+      };
+
+      const response = await axios.put(
+        `https://jbcompanyapi.onrender.com/cursos/${id}`, valores, { headers }
+      );
+
+      return response.data;
+    } catch (error) {
+      console.log("Erro ao buscar detalhes do Curso", error);
+      throw error;
+    }
+  }
+
+
 
   async deletarCursos(id, token) {
     try {

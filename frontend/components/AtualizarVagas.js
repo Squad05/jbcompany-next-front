@@ -7,7 +7,6 @@ import {
     Button,
     CardActions,
     CardContent,
-    CardHeader,
     Divider,
     FormControl,
     InputLabel,
@@ -75,11 +74,7 @@ export default function AtualizarVaga() {
 
     return (
         <form onSubmit={handleSubmit} className={styles.estiloFormularioDashBoard}>
-            <CardHeader
-                subheader="Insira uma nova vaga"
-                title="Formulário de Vagas"
-            />
-            <Divider />
+           
             <CardContent>
                 <Typography
                     className={styles.tituloFormulario}

@@ -16,9 +16,6 @@ import { extrairEmailDoToken } from "@/services/auth/EmailToken";
 import Link from "next/link";
 
 const CursoCard = ({ curso }) => {
-  const handleEdit = () => {
-    console.log(`Editar curso: ${curso.materia}`);
-  };
 
   const handleDelete = async () => {
     try {
@@ -35,7 +32,7 @@ const CursoCard = ({ curso }) => {
     <Card className={styles.estilo_card}>
       <CardContent className={styles.estilo_card_header}>
         <Link href={`/dashboard/cursos/aulas/${curso.id}`}>
-         <Typography className={styles.estilo_header_titulo} variant="h4">
+          <Typography className={styles.estilo_header_titulo} variant="h4">
             {curso.materia}
           </Typography>
         </Link>
@@ -43,10 +40,10 @@ const CursoCard = ({ curso }) => {
       <Divider />
       <CardContent>
         <Typography variant="body2" color="textSecondary">
-          Descrição do Curso:  <span className={styles.estilo_valores_vaga}>{curso.descricao}</span>
+          Duração:  <span className={styles.estilo_valores_vaga}>{curso.descricao}</span>
         </Typography>
         <Typography variant="body2" color="textSecondary">
-          Duração:  <span className={styles.estilo_valores_vaga}>{curso.duracao}</span>
+          Descrição do Curso:  <span className={styles.estilo_valores_vaga}>{curso.duracao}</span>
         </Typography>
 
         <Box sx={{ flexGrow: 1 }} />
@@ -57,14 +54,15 @@ const CursoCard = ({ curso }) => {
             marginTop: 2,
           }}
         >
-          <Button
-            variant="outlined"
-            color="primary"
-            onClick={handleEdit}
-            className={styles.card_botao_editar_acoes}
-          >
-            Editar
-          </Button>
+          <Link href={`/dashboard/cursos/${curso.id}`}>
+            <Button
+              variant="outlined"
+              color="primary"
+              className={styles.card_botao_editar_acoes}
+            >
+              Editar
+            </Button>
+          </Link>
           <Button
             variant="outlined"
             color="error"
@@ -82,6 +80,7 @@ const CursoCard = ({ curso }) => {
 
 CursoCard.propTypes = {
   curso: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     materia: PropTypes.string.isRequired,
     descricao: PropTypes.string.isRequired,
     duracao: PropTypes.string.isRequired,

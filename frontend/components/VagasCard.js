@@ -9,7 +9,6 @@ import {
   Grid,
   Typography,
   Button,
-  CardHeader,
 } from "@mui/material";
 import VagaService from "@/services/VagaService";
 import { extrairEmailDoToken } from "@/services/auth/EmailToken";
