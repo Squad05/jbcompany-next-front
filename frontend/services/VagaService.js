@@ -51,6 +51,27 @@ class VagaService {
     }
   }
 
+  async atualizarVagas(id, token, valores) {
+    try {
+      const headers = {
+        Authorization: `Bearer ${token}`,
+      };
+
+      const response = await axios.put(
+        `https://jbcompanyapi.onrender.com/vagas/${id}`,
+        valores,
+        { headers }
+      );
+
+      return response.data;
+    } catch (error) {
+      console.log("Erro ao buscar detalhes de Vagas", error);
+      throw error;
+    }
+
+  }
+
+
   async deletarVagas(id, token) {
     try {
       const headers = {

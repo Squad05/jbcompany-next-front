@@ -14,11 +14,9 @@ import {
 import VagaService from "@/services/VagaService";
 import { extrairEmailDoToken } from "@/services/auth/EmailToken";
 import styles from "../styles/VagasDashBoardCard.module.css";
+import Link from "next/link";
 
 const VagaCard = ({ vaga }) => {
-  const handleEdit = () => {
-    console.log(`Editar vaga: ${vaga.descricao}`);
-  };
 
   const handleDelete = async () => {
     try {
@@ -72,14 +70,16 @@ const VagaCard = ({ vaga }) => {
             marginTop: 2,
           }}
         >
-          <Button
-            variant="outlined"
-            className={styles.card_botao_editar_acoes}
-            color="primary"
-            onClick={handleEdit}
-          >
-            Editar
-          </Button>
+          <Link href={`/dashboard/vagas/${vaga.id}`}>
+            <Button
+              variant="outlined"
+              className={styles.card_botao_editar_acoes}
+              color="primary"
+
+            >
+              Editar
+            </Button>
+          </Link>
           <Button
             variant="outlined"
             className={styles.card_botao_excluir_acoes}

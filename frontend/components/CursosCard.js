@@ -13,6 +13,7 @@ import {
 import CursoService from "@/services/CursoService";
 import styles from "../styles/VagasDashBoardCard.module.css";
 import { extrairEmailDoToken } from "@/services/auth/EmailToken";
+import Link from "next/link";
 
 const CursoCard = ({ curso }) => {
   const handleEdit = () => {
@@ -33,9 +34,11 @@ const CursoCard = ({ curso }) => {
   return (
     <Card className={styles.estilo_card}>
       <CardContent className={styles.estilo_card_header}>
-        <Typography className={styles.estilo_header_titulo} variant="h4">
-          {curso.materia}
-        </Typography>
+        <Link href={`/dashboard/cursos/aulas/${curso.id}`}>
+         <Typography className={styles.estilo_header_titulo} variant="h4">
+            {curso.materia}
+          </Typography>
+        </Link>
       </CardContent>
       <Divider />
       <CardContent>

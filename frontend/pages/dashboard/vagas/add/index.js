@@ -1,5 +1,5 @@
 import DashboardMenuAdd from "@/components/DashboardMenuAdd";
-import FormularioVagas from "@/components/FormularioVagas";
+import FormularioVagas from "@/components/FormVagas";
 import Menu from "@/components/NavDash";
 import Head from "next/head";
 import styles from "../../../../styles/Dashboard.module.css";
