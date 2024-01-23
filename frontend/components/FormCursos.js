@@ -15,7 +15,7 @@ export default function FormularioCursos() {
   const [descricao, setDescricao] = useState("");
   const [duracao, setDuracao] = useState("");
 
-  const token = typeof window !== 'undefined' ? localStorage.getItem("token") : null;
+  const token = localStorage.getItem("token");
   const router = useRouter();
 
   const handleSubmit = async (e) => {

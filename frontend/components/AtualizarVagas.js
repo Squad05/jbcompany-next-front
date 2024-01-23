@@ -24,7 +24,7 @@ export default function AtualizarVaga() {
     });
 
 
-    const token = typeof window !== 'undefined' ? localStorage.getItem("token") : null;
+    const token = localStorage.getItem("token");
     const router = useRouter();
     const { id } = router.query;
 
