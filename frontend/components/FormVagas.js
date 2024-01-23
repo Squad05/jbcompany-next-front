@@ -19,7 +19,7 @@ export default function FormularioVagas() {
   const [statusVaga, setStatusVaga] = useState("");
   const [salario, setSalario] = useState("");
 
-  const token = localStorage.getItem("token");
+  const token = typeof window !== 'undefined' ? localStorage.getItem("token") : null;
   const router = useRouter();
 
   const handleSubmit = async (e) => {

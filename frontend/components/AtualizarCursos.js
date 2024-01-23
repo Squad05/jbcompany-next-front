@@ -17,7 +17,7 @@ export default function AtualizarCurso() {
         duracao: "",
     });
 
-    const token = localStorage.getItem("token");
+    const token = typeof window !== 'undefined' ? localStorage.getItem("token") : null;
     const router = useRouter();
     const { id } = router.query;
 
