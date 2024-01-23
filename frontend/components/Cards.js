@@ -15,7 +15,7 @@ export default function Cards() {
     console.log("efeito");
   });
   return (
-    <Container maxWidth="lg" id="sobre">
+    <Container maxWidth="lg" id="sobre" className={styles.container_cards}>
       <Grid container spacing={3}>
         {cards.map((step, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>

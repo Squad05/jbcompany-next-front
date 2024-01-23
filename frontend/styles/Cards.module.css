@@ -1,40 +1,57 @@
-.caixacard {
-    position: relative;
-    background-color: #B378FF;
-    transition: transform 0.3s, background-color 0.3s;
-    overflow: hidden; 
-    border: 1px solid #B378FF; /* Definindo a cor da borda padrão */
+.container_cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.container_cards .caixacard {
+  position: relative;
+  background-color: #B378FF;
+  transition: transform 0.3s, background-color 0.3s;
+  overflow: hidden; 
+  border: 1px solid #B378FF; 
   height: 400px;
+  margin: 25px; 
+  flex: 1; 
 }
-  
-  .caixacard::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 50px 50px 0 0; 
-    border-color: white transparent transparent transparent; 
-    transform: rotate(-180deg); 
-  
+
+.container_cards .caixacard::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 0; 
+  border-color: white transparent transparent transparent; 
+  transform: rotate(-180deg); 
 }
-  
-  .caixacard:hover {
-    transform: scale(1.07);
-    border: 1px solid #B378FF;
-  }
-  
-  .titulocard, .descricaocard {
-    color: #fff;
-  }
 
-  .descricaocard {
-    font-size: 16px;
-  }
+.container_cards .caixacard:hover {
+  transform: scale(1.07);
+  border: 1px solid #B378FF;
+}
 
+.container_cards .caixacard .titulocard,
+.container_cards .caixacard .descricaocard {
+  color: #fff;
+}
 
-  .imgcard {
-    border-radius: 5px;
+.container_cards .caixacard .descricaocard {
+  font-size: 16px;
+}
+
+.container_cards .caixacard .imgcard {
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container_cards .caixacard {
+    height: 490px;
+    margin: 5px; 
   }
+}

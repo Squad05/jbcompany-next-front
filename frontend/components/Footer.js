@@ -9,14 +9,14 @@ export default function Footer() {
           <h5>Seções</h5>
           <ul className="nav flex-column">
             <li className="nav-item mb-2">
-              <a href="/" className="nav-link p-0">
+              <Link href="/" className="nav-link p-0">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item mb-2">
-              <a href="#sobre" className="nav-link p-0">
+              <Link href="#sobre" className="nav-link p-0">
                 Sobre
-              </a>
+              </Link>
             </li>
             <li className="nav-item mb-2">
               <a href="#equipe" className="nav-link p-0">
@@ -24,9 +24,9 @@ export default function Footer() {
               </a>
             </li>
             <li className="nav-item mb-2">
-              <a href="#faq" className="nav-link p-0">
+              <Link href="#faq" className="nav-link p-0">
                 Faq
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

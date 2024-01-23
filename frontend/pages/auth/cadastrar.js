@@ -1,7 +1,7 @@
 import Head from "next/head";
 import FormCadastro from "@/components/FormCadastro";
-import styles from "../../styles/FormLandingPage.module.css";
-import Logo from "@/components/Logo";
+import styles from "../../styles/AuthPage.module.css";
+import AuthDivLateral from "@/components/AuthDivLateral";
 
 export default function Cadastrar() {
   return (
@@ -9,8 +9,10 @@ export default function Cadastrar() {
       <Head>
         <title> Jb Company - Cadastrar </title>
       </Head>
-      <Logo />
-      <FormCadastro />
+      <main className={styles.container_principal}>
+        <AuthDivLateral />
+        <FormCadastro />
+      </main>
     </div>
   );
 }

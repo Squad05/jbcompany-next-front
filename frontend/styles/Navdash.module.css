@@ -1,0 +1,67 @@
+.estilo_navdash {
+    background-color: #0D0117;
+    padding: 16px 10px;
+    width: 100%;
+}
+
+.estilo_navdash  .caixa_botao_menu {
+    color:#B378FF;
+}
+
+.estilo_navdash  .caixa_botao_menu .botao_menu {
+    font-size: 40px;
+}
+
+.estilo_navdash  .menuDrawer {
+    background-color: rgba(164, 52, 255, 0.09);
+}
+
+.menuDrawer .listaDrawer {
+    background-color: #0D0117;
+    height: 100vh;
+    width: 250px;
+    padding: 15px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.container_nome {
+    gap: 15px;
+    cursor: pointer;
+
+}
+
+.container_nome:hover {
+   background-color: #B378FF;
+
+}
+
+.container_logout {
+    gap: 15px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: auto;
+    bottom: 0;
+    display: flex;
+    align-items: center; 
+    background-color: #B378FF;
+
+}
+
+.containericon  {
+    color: white;
+    background-color: transparent !important;
+    font-size: 28px;
+    
+}
+
+.nomeItemLista span {
+    color: white;
+    font-size: 20px;
+
+}
+
+
+

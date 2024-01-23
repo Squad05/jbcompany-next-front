@@ -1,0 +1,93 @@
+.container_componente {
+    padding: 2px 18px;
+    background-color: rgb(255, 255, 255);
+}
+
+.container_titulo_home {
+    text-align: center;
+    min-width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_titulo_home h1 {
+   font-size: 37px;
+   font-weight: 600;
+   color: #0D0117;
+}
+
+.container_cards_home {
+    display: flex;
+    justify-content: space-around;
+    padding:  30px 0;
+}
+
+.container_cards_home .estilo_card{
+    height: 220px;
+}
+.container_cards_home .estilo_card {
+    display: flex;
+    flex-direction: column;
+}
+
+.estilo_card .header_card {
+    background-color:  #0D0117;
+    height: 60px;
+}
+
+.estilo_card {
+    padding: 0;
+    border: 1px solid #0d011714;
+}
+
+.header_card span {
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+
+.container_icon  {
+    background-color: transparent !important;
+}
+
+.container_icon svg {
+    font-size: 32px;
+}
+
+.body_card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    
+}
+
+.body_card .texto_card  {
+    display: flex;
+    text-align: center;
+    height: 100px;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20px ;
+    color: #0D0117;
+}
+
+.body_card .texto_valor {
+  font-weight: 600;
+}
+
+
+@media screen and (max-width: 768px) {
+    .header_card span {
+        font-size: 19px; 
+    }
+}
+
+@media screen and (max-width: 616px) {
+    .header_card span {
+        font-size: 16px; 
+    }
+}

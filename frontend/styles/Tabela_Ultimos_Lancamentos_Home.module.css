@@ -1,0 +1,58 @@
+.container {
+  margin: 15px 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #0D0117;
+  overflow: hidden;
+}
+
+.estilo_tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.estilo_tabela th, .estilo_tabela td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.estilo_tabela th {
+  background-color: #0D0117;
+  color: white;
+}
+
+@media (max-width: 640px) {
+.container {
+  margin: 15px 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #0D0117;
+  overflow: hidden;
+}
+}
+
+@media (max-width: 516px) {
+  .estilo_tabela th:nth-child(3),
+  .estilo_tabela td:nth-child(3),
+  .estilo_tabela th:nth-child(4),
+  .estilo_tabela td:nth-child(4),
+  .estilo_tabela th:nth-child(5),
+  .estilo_tabela td:nth-child(5),
+  .estilo_tabela th:nth-child(6),
+  .estilo_tabela td:nth-child(6),
+  .estilo_tabela th:nth-child(7),
+  .estilo_tabela td:nth-child(7),
+  .estilo_tabela th:nth-child(8),
+  .estilo_tabela td:nth-child(8),
+  .estilo_tabela th:nth-child(9),
+  .estilo_tabela td:nth-child(9),
+  .estilo_tabela th:nth-child(10),
+  .estilo_tabela td:nth-child(10) {
+      display: none;
+  }
+
+
+}
+
+

@@ -1,37 +1,27 @@
 .navBar {
-    background-color: #0D0117;
+    background-color: #0D0117 !important;
     padding: 20px;
     display: flex;
 }
 
-/* Botões de navegação da dashboard */
-.nome_icon {
-    color: #fff;
-    padding: 15px;
-    text-decoration: none;
-}
-
-.botao_icon {
-    color: #fff;
-}
 
 .navBar div {
     gap: 20px;
 }
 
 .navBar a:hover {
-    color:#B378FF;
+    color: #B378FF;
     background-color: transparent;
 }
 
-.itemNavBarEstilo {
+.navBar .itemNavBarEstilo {
     font-size: 20px;
 }
 
 
-.botaoEstilo {
+.navBar .botaoEstilo {
     background-color: #B378FF;
-    color:white;
+    color: white;
     border: none;
     padding: 8px 22px;
     text-decoration: none;
@@ -40,12 +30,42 @@
     border-radius: 15px;
 }
 
-.botaoEstilo:hover {
+.navBar .botaoEstilo:hover {
     background-color: white !important;
-    color:#B378FF;
+    color: #B378FF;
 }
 
-.boxSwitch {
-    min-height: 120px;
+.item_logout {
+    background-color: white !important;
+
+    color: #B378FF;
+
 }
 
+.menuDrawer .listaDrawer {
+    background-color: #0D0117;
+    height: 100vh;
+    width: 250px;
+    padding: 15px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.nomeItemLista {
+    color: white;
+    font-size: 28px;
+    
+}
+
+.container_nome {
+    gap: 15px;
+    cursor: pointer;
+
+}
+
+.container_nome:hover {
+   background-color: #B378FF;
+
+}
