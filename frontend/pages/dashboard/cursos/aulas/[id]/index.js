@@ -2,6 +2,7 @@ import Head from "next/head";
 import Menu from "@/components/NavDash";
 import { FormularioAulas } from "@/components/FormAulas";
 import { useAuth } from "@/hooks/useAuth";
+import TabelaUltimasAulasLancadas from "@/components/Aulas";
 
 
 export default function Aulas() {
@@ -19,6 +20,7 @@ export default function Aulas() {
             <Menu />
             <main >
                 <FormularioAulas />
+                <TabelaUltimasAulasLancadas />
             </main>
         </div>
     )

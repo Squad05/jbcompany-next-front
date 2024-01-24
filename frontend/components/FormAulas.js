@@ -13,15 +13,13 @@ import { useRouter } from "next/router";
 import SchoolIcon from "@mui/icons-material/School";
 import styles from "../styles/FormsDashboard.module.css";
 import AulasService from "@/services/AulasService";
-import CursoCardList from "./CursosCard";
 
 export const FormularioAulas = () => {
   const [titulo, setTitulo] = useState("");
   const [link, setLink] = useState("");
   const [descricao, setDescricao] = useState("");
 
-  const token =
-    typeof window !== "undefined" ? localStorage.getItem("token") : null;
+  const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
 
   const router = useRouter();
 
