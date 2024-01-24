@@ -1,12 +1,15 @@
 import axios from "axios";
+import CursoService from "./CursoService";
 
 class AulaService {
-  
   async cadastrarAulas(aula, token) {
     try {
       const headers = {
         Authorization: `Bearer ${token}`,
       };
+
+      console.log("infoemações aula");
+      console.log(aula);
 
       const response = await axios.post(
         "https://jbcompanyapi.onrender.com/aulas",

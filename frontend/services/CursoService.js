@@ -1,6 +1,17 @@
 import axios from "axios";
 
 class CursoService {
+  async pegarCursoPorId(id) {
+    try {
+      const response = await axios.get(
+        `https://jbcompanyapi.onrender.com/cursos/${id}`
+      );
+      return response.data;
+    } catch (error) {
+      console.error(`Erro ao obter curso por ID ${id}:`, error);
+      throw error;
+    }
+  }
 
   async cadastrarCursos(curso, token) {
     try {
@@ -20,7 +31,6 @@ class CursoService {
       throw error;
     }
   }
-
 
   async listarCursos() {
     try {
@@ -50,7 +60,6 @@ class CursoService {
     }
   }
 
-  
   async atualizarCurso(id, token, valores) {
     try {
       const headers = {
@@ -58,7 +67,9 @@ class CursoService {
       };
 
       const response = await axios.put(
-        `https://jbcompanyapi.onrender.com/cursos/${id}`, valores, { headers }
+        `https://jbcompanyapi.onrender.com/cursos/${id}`,
+        valores,
+        { headers }
       );
 
       return response.data;
@@ -67,8 +78,6 @@ class CursoService {
       throw error;
     }
   }
-
-
 
   async deletarCursos(id, token) {
     try {
