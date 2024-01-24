@@ -60,7 +60,7 @@
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1170px) {
     .intro_div {
         flex-direction: column;
         align-items: center;
