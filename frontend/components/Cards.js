@@ -12,7 +12,7 @@ import { useEffect } from "react";
 
 export default function Cards() {
   useEffect(() => {
-    console.log("efeito");
+  
   });
   return (
     <Container maxWidth="lg" id="sobre" className={styles.container_cards}>

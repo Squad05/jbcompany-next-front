@@ -1,8 +1,5 @@
-import { useState, useEffect } from "react";
 import styles from "../styles/DashboardMenuAdd.module.css";
 import Link from "next/link";
-import SearchIcon from "@mui/icons-material/Search";
-import { Button, InputAdornment, TextField } from "@mui/material";
 
 const DashboardMenuAdd = ({ titulo, linkRota, textoLink }) => {
   return (

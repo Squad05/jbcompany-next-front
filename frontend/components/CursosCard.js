@@ -31,7 +31,7 @@ const CursoCard = ({ curso }) => {
   return (
     <Card className={styles.estilo_card}>
       <CardContent className={styles.estilo_card_header}>
-        <Link href={`/dashboard/cursos/aulas/${curso.id}`}>
+        <Link className={styles.estilo_header} href={`/dashboard/cursos/aulas/${curso.id}`}>
           <Typography className={styles.estilo_header_titulo} variant="h4">
             {curso.materia}
           </Typography>
