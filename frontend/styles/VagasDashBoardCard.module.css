@@ -20,6 +20,14 @@
     text-align: center;
 }
 
+.estilo_header{
+    text-decoration: none;
+}
+
+.estilo_card_header:hover {
+    background-color: #B378FF;
+}
+
 .estilo_card_content {
     padding: 10px; 
 }

@@ -54,8 +54,9 @@
 }
 
 .nomeItemLista {
-    color: white;
-    font-size: 28px;
+    color: white !important;
+    margin-left: 60px !important;
+    font-size: 28px !important;
     
 }
 

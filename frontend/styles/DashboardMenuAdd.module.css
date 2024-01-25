@@ -1,11 +1,11 @@
 .dashboardMenuContainer {
     height: auto;
-    padding: 10px ;
+    padding: 10px;
     margin: 10px 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap:20px;
+    gap: 20px;
     justify-content: space-between;
 
 }
@@ -20,22 +20,23 @@
 }
 
 .containerSearch .inputSearch {
-    min-width:90%;
+    min-width: 90%;
     border-radius: 10px;
 }
 
 
-.containerSearch  .inputSearch:focus  {
+.containerSearch .inputSearch:focus {
     border: none;
     outline: none;
 }
+
 .containerADD {
     display: flex;
     justify-content: flex-end;
 }
 
 .botaoADD {
-    background-color:#0D0117 ;
+    background-color: #0D0117;
     padding: 13px 30px;
     border-radius: 10px;
     text-decoration: none;
@@ -48,11 +49,24 @@
 }
 
 
-  
-  .dashboardMenuContainer .containerInfo h3 {
+
+.dashboardMenuContainer .containerInfo h3 {
     font-size: 30px;
     color: #0D0117;
     position: relative;
-  }
-  
-  
+}
+
+@media screen and (max-width: 768px) {
+    .dashboardMenuContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .containerSearch {
+        width: 100%;
+    }
+
+    .containerADD {
+        justify-content: flex-start;
+    }
+}
