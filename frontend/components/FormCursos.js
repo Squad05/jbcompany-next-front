@@ -14,6 +14,7 @@ export default function FormularioCursos() {
   const [materia, setMateria] = useState("");
   const [descricao, setDescricao] = useState("");
   const [duracao, setDuracao] = useState("");
+  const [categoria, setCategoria] = useState("");
 
   const token = typeof window !== 'undefined' ? localStorage.getItem("token") : null;
   const router = useRouter();
@@ -25,13 +26,11 @@ export default function FormularioCursos() {
       materia,
       descricao,
       duracao,
+      categoria,
     };
 
     try {
       const response = await CursoService.cadastrarCursos(curso, token);
-
-      console.log("response", response);
-
       router.push('/dashboard/cursos');
     } catch (erro) {
       console.error("Erro ao enviar requisição:", erro.message);
@@ -83,6 +82,28 @@ export default function FormularioCursos() {
           onChange={(e) => setDuracao(e.target.value)}
           required
         />
+      </FormControl>
+
+      <InputLabel htmlFor="categoria">Categoria</InputLabel>
+      <FormControl fullWidth >
+        <select
+          id="categoria"
+          className={styles.formControlDashBoardInput}
+          value={categoria}
+          onChange={(e) => setCategoria(e.target.value)}
+          required
+        >
+          <option disabled value="">
+            Selecione uma categoria
+          </option>
+          <option value="Tecnologia">Tecnologia da Informação</option>
+          <option value="Negocios">Negocios</option>
+          <option value="Design">Design</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Produtividade">Produtividade</option>
+          <option value="Jogos">Jogos</option>
+          <option value="Linguas">Linguas</option>
+        </select>
       </FormControl>
 
       <Button

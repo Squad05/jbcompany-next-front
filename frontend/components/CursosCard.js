@@ -45,6 +45,10 @@ const CursoCard = ({ curso }) => {
         <Typography variant="body2" color="textSecondary">
           Descrição do Curso:  <span className={styles.estilo_valores_vaga}>{curso.duracao}</span>
         </Typography>
+        <Typography variant="body2" color="textSecondary">
+          Categoria: <span className={styles.estilo_valores_vaga}>{curso.categoria}</span>
+          {console.log("Categoria do curso:", curso.categoria)}
+        </Typography>
 
         <Box sx={{ flexGrow: 1 }} />
         <Box
@@ -84,6 +88,7 @@ CursoCard.propTypes = {
     materia: PropTypes.string.isRequired,
     descricao: PropTypes.string.isRequired,
     duracao: PropTypes.string.isRequired,
+    categoria: PropTypes.string.isRequired,
   }).isRequired,
 };
 
@@ -111,12 +116,16 @@ const CursoCardList = () => {
     fetchCursos();
   }, []);
 
+  const handleDeleteCurso = (cursoId) => {
+    setVagas((prevCursos) => prevCursos.filter((curso) => curso.id !== cursoId));
+  };
+
   return (
     <Container maxWidth="lg">
       <Grid container spacing={4}>
         {cursos.map((curso, index) => (
           <Grid item xs={12} sm={6} md={6} key={index}>
-            <CursoCard curso={curso} />
+            <CursoCard curso={curso} ondeDelete={handleDeleteCurso} />
           </Grid>
         ))}
       </Grid>

@@ -15,6 +15,7 @@ export default function AtualizarCurso() {
         materia: "",
         descricao: "",
         duracao: "",
+        categoria: "",
     });
 
     const token = typeof window !== 'undefined' ? localStorage.getItem("token") : null;
@@ -36,6 +37,7 @@ export default function AtualizarCurso() {
                 materia: detalhesCurso.materia,
                 descricao: detalhesCurso.descricao,
                 duracao: detalhesCurso.duracao,
+                categoria: detalhesCurso.categoria
             });
         } catch (error) {
             console.error("Erro ao obter detalhes da vaga:", error);
@@ -69,7 +71,7 @@ export default function AtualizarCurso() {
                 variant="h1"
                 component="h1"
             >
-             
+
                 Atualizar Curso
             </Typography>
 
@@ -110,6 +112,29 @@ export default function AtualizarCurso() {
                     onChange={handleChange}
                     required
                 />
+            </FormControl>
+
+            <InputLabel htmlFor="categoria">Categoria</InputLabel>
+            <FormControl fullWidth >
+                <select
+                    id="categoria"
+                    name="categoria"
+                    className={styles.formControlDashBoardInput}
+                    value={dadosCurso.categoria}
+                    onChange={handleChange}
+                    required
+                >
+                    <option disabled value="">
+                        Selecione uma categoria
+                    </option>
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Negocios">Negocios</option>
+                    <option value="Design">Design</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Produtividade">Produtividade</option>
+                    <option value="Jogos">Jogos</option>
+                    <option value="Linguas">Linguas</option>
+                </select>
             </FormControl>
 
             <Button

@@ -43,14 +43,14 @@ export default function Footer() {
           <form>
             <h5>Assine nossa newsletter</h5>
             <p>Receba novidades e promoções exclusivas.</p>
-            <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+            <div className={styles.input_container}>
               <label htmlFor="newsletter1" className="visually-hidden">
                 Endereço de Email
               </label>
               <input
                 id="newsletter1"
                 type="text"
-                className="form-control"
+                className={styles.input_footer}
                 placeholder="Endereço de Email"
               />
               <button className={`btn ${styles.estilobotao}`} type="button">

@@ -26,8 +26,16 @@
   .estilobotao {
     background-color: #B378FF;
     color:   white;
-
+    height: 47px;
   }
+
+  .input_container  .input_footer {
+    width: 80%;
+    padding: 8px;
+    background-color: white;
+    outline: none;
+  }
+  
 
   .estilobotao:hover {
     background-color: #B378FF;
