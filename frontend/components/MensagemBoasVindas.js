@@ -12,7 +12,7 @@ export default function MensagemBoasVindas() {
         const { nome } = await UserService.detalhesUsuario(userToken);
         setNomeUsuario(nome);
       } catch (error) {
-        onsole.error("Erro ao buscar detalhes do Usuário", error);
+        console.error("Erro ao buscar detalhes do Usuário", error);
       }
     }
     fetchData();

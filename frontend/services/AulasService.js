@@ -24,16 +24,19 @@ class AulaService {
     }
   }
 
-
-  async listarAulasPorEmpresa( token) {
+  async listarAulasPorEmpresa(id, token) {
     try {
       const headers = {
         Authorization: `Bearer ${token}`,
       };
+
+      console.log(id);
       const response = await axios.get(
-        `https://jbcompanyapi.onrender.com/aulas`,
+        `https://jbcompanyapi.onrender.com/aulas/curso/${id}`,
         { headers }
       );
+
+      console.log(response);
       return response.data;
     } catch (error) {
       console.error("Erro ao listar aulas do usuário:", error);
