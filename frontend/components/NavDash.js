@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -10,7 +10,7 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import HomeIcon from "@mui/icons-material/Home"; 
+import HomeIcon from "@mui/icons-material/Home";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -18,8 +18,12 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import Logo from "./Logo";
 import LogoutService from "@/services/auth/LougotService";
 import styles from "../styles/Navdash.module.css";
+import UserService from "@/services/UserService";
 
 const NavDash = () => {
+  const [fotoUsuario, setFotoUsuario] = useState(null);
+  const [nomeUsuario, setNomeUsuario] = useState("");
+
   const router = useRouter();
 
   const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -41,7 +45,27 @@ const NavDash = () => {
     router.push("/");
   };
 
-  const userAvatar = "/caminho/para/imagem.jpg";
+
+  useEffect(() => {
+    const fetchUsuario = async () => {
+      try {
+        const userToken = localStorage.getItem("token");
+        const detalhesUsuario = await UserService.detalhesUsuario(userToken);
+        setNomeUsuario(detalhesUsuario.nome);
+
+        if (detalhesUsuario.foto == null) {
+          setFotoUsuario("oi.png");
+        } else {
+          setFotoUsuario(detalhesUsuario.foto);
+        }
+      } catch (error) {
+        console.error("Erro ao obter detalhes do usuário:", error);
+      }
+    };
+
+    fetchUsuario();
+  }, []);
+
 
   const menuItems = [
     {
@@ -129,7 +153,7 @@ const NavDash = () => {
               onClick={handleMenu}
               color="inherit"
             >
-              <Avatar alt="User Avatar" src={userAvatar} />
+              <Avatar alt="User Avatar" src={fotoUsuario} >{nomeUsuario.slice(0, 2).toUpperCase()}</Avatar>
             </IconButton>
           </div>
         </Toolbar>
