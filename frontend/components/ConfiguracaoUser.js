@@ -43,10 +43,10 @@ export const ConfiguracaoUser = () => {
         nome: detalhesUsuario.nome,
         telefone: detalhesUsuario.telefone,
         email: detalhesUsuario.email,
-        senha: "",
-        confirmarSenha: "",
+        senha: detalhesUsuario.senha,
+        confirmarSenha: detalhesUsuario.confirmarSenha,
         descricao: detalhesUsuario.descricao,
-        areaAtuacao: detalhesUsuario.area_de_atuacao,
+        areaAtuacao: detalhesUsuario.areaAtuacao,
       });
     } catch (error) {
       console.error("Erro ao obter detalhes do usuário:", error);
@@ -63,6 +63,18 @@ export const ConfiguracaoUser = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+
+    if (!values.senha) {
+      delete values.senha;
+      delete values.confirmarSenha;
+    } else {
+
+      if (values.senha !== values.confirmarSenha) {
+        console.error("As senhas não coincidem");
+        return;
+      }
+    }
 
     try {
       await UserService.editarUsuario(token, values);
