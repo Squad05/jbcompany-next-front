@@ -22,10 +22,6 @@ O projeto tem como objetivo ser um elo de ligação entre as mulheres LGBT que e
 
 Para acessar a rede social JobCompany basta que você baixe o app na celular ou desktop, fazer seu cadastro de login e iniciar sua navegação incerindo sua oportunidade de trabalho para que as mulheres LGBT possam acessar.
 
-## Funcionalidades:
-
-?
-
 ## Como Contribuir:
 
 Se você gostaria de contribuir para este projeto, sinta-se à vontade para abrir um "fork" ou enviar um "pull request".
