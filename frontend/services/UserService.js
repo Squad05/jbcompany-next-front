@@ -10,8 +10,27 @@ class UserService {
         "https://jbcompanyapi.onrender.com/auth/detalhes",
         { headers }
       );
+      const buscarQuantidadeCandidatas = await axios.get(
+        "https://jbcompanyapi.onrender.com/candidaturas/contarPorEmpresa",
+        { headers }
+      );
 
-      return response.data;
+      const buscarQuantidadeCandidatasCursos = await axios.get(
+        "https://jbcompanyapi.onrender.com/candidaturas-cursos/contarPorEmpresa",
+        { headers }
+      );
+
+      const quantidadeImpactadas =
+        buscarQuantidadeCandidatasCursos.data + buscarQuantidadeCandidatas.data;
+
+      const UserDetails = {
+        ...response.data,
+        qtdCandidatas: buscarQuantidadeCandidatas.data,
+        qtdCandidatasCursos: buscarQuantidadeCandidatasCursos.data,
+        qtdImpactadas: quantidadeImpactadas,
+      };
+
+      return UserDetails;
     } catch (error) {
       console.error("Erro ao buscar detalhes do Usuário", error);
       throw error;

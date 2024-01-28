@@ -12,9 +12,14 @@ import VagaService from "@/services/VagaService";
 import { extrairEmailDoToken } from "@/services/auth/EmailToken";
 import styles from "../styles/CardsDashBoardHome.module.css";
 import CursoService from "@/services/CursoService";
+import UserService from "@/services/UserService";
 
 const CardsHome = () => {
   const [vagasPostadas, setVagasPostadas] = useState(0);
+  const [candidaturasVagas, setCandidaturasVagas] = useState(0);
+  const [candidaturasCursos, setCandidaturasCursos] = useState(0);
+  const [pessoasImpactadas, setPessoasImpactadas] = useState(0);
+
   const [cursosPostados, setCursosPostados] = useState(0);
 
   useEffect(() => {
@@ -28,6 +33,10 @@ const CardsHome = () => {
           userToken
         );
 
+        const detalhesUsuario = await UserService.detalhesUsuario(userToken);
+        setCandidaturasVagas(detalhesUsuario.qtdCandidatas);
+        setCandidaturasCursos(detalhesUsuario.qtdCandidatasCursos);
+        setPessoasImpactadas(detalhesUsuario.qtdImpactadas);
         setVagasPostadas(vagasDoUsuario.length);
       } catch (error) {
         console.error("Erro ao obter vagas do usuário:", error);
@@ -54,26 +63,24 @@ const CardsHome = () => {
       }
     }
 
-    fetchCursosPostados();  
+    fetchCursosPostados();
   }, []);
-
   const projetos = [
     {
       titulo: "Vagas",
       postada: vagasPostadas,
-      aplicada: 5,
+      aplicada: candidaturasVagas,
       icon: <WorkIcon />,
     },
     {
       titulo: "Cursos",
       postada: cursosPostados,
-      cursando: 15,
+      cursando: candidaturasCursos,
       icon: <SchoolIcon />,
     },
     {
       titulo: "Mulheres Impactadas",
-      pessoasImpactadas: 50,
-      projetoEmpoderamento: 10,
+      pessoasImpactadas: pessoasImpactadas,
       icon: <PeopleIcon />,
     },
   ];
