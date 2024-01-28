@@ -48,10 +48,6 @@ Se você gostaria de contribuir para este projeto, sinta-se à vontade para abri
 
 [Grasielly Dias Apolinário](https://github.com/Grasielly84)
 
-[Guilherme Augusto Pinto](https://github.com/GuilhermeAugust0)
-
-[Hellen dos Santos Ferreira](https://github.com/HellenS95) 
-
 [Jeferson Ribeiro da Silva](https://github.com/1Jeferson) 
 
 [Maria Eduarda Santos Dourado](https://github.com/MeDourado) 
