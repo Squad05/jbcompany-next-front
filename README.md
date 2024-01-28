@@ -1,36 +1,31 @@
-# JobDelas 🌈 - A Rede Social para Empoderamento Feminino
+# ![logojbcompany](https://github.com/Squad05/jbcompany-next-front/assets/129866444/42957ecc-61cf-46e0-8b4f-f6dddfb97d07)
 
-Aumentando a Diversidade e Inclusão no Mercado de Trabalho para mulheres.
+> Status: Concluído
 
-Este projeto está sendo desenvolvido como parte do programa Recode Pro, onde estamos criando um projeto full stack.
+### Esta é uma aplicação web de um projeto frontend em React/Next. 
 
-## Objetivo do JOB-DELAS
+## O que é o projeto?
 
-Nosso objetivo é criar uma comunidade online onde mulheres com vasta experiência e conhecimento profissional possam ser contratadas com base em suas habilidades, experiência e competências. Queremos que as mulheres sejam reconhecidas e valorizadas pelo que são e pelo que podem oferecer.
+O JobCompany é uma rede social que visa oferecer oportunidades iguais e representatividade no mercado de trabalho para mulheres LGBTQA+.
 
-## Acompanhamento do Projeto
+## Descrição do projeto:
 
-### Base do Frontend
-
-Nós concluímos a fase inicial do projeto, que consistiu na criação da base do frontend, que inclui a estrutura da nossa plataforma.
-
-### Modelagem de Dados
-
-Nós concluímos a modelagem de dados das funcionalidades.
- 
-
-  ![](https://uploaddeimagens.com.br/images/004/594/970/full/modelagem_dados.PNG?1693574446)
+O projeto tem como objetivo ser um elo de ligação entre as mulheres LGBT que estão querendo ingressar no mercado de trbalho com empresas que oferecem vagas específicas para este público. Com isso podemos contribuir com:
++ aumento da oportunidade de trabalho;
++ criação de um ambiente colaborativo;
++ networking;
++ comunicação acertiva;
++ indicações de cursos para o aprimoramento profissional.
 
 
-## Próximos Passos
+## Como baixar e iniciar?
 
-À medida que avançamos, nossos próximos passos incluem:
+Para acessar a rede social JobCompany basta que você baixe o app na celular ou desktop, fazer seu cadastro de login e iniciar sua navegação incerindo sua oportunidade de trabalho para que as mulheres LGBT possam acessar.
 
-1. Desenvolvimento do Backend: Estaremos trabalhando na criação do backend da plataforma.
+## Como Contribuir:
 
-2. Implementação de Recursos: Continuaremos a adicionar recursos que tornarão a experiência do usuário mais rica e envolvente.
+Se você gostaria de contribuir para este projeto, sinta-se à vontade para abrir um "fork" ou enviar um "pull request".
 
-E entre outros. 
 
 ### Tecnologias Utilizadas
 ![HTML5](https://img.shields.io/badge/HTML-000?style=for-the-badge&logo=html5&logoColor=30A3DC)
@@ -43,7 +38,7 @@ E entre outros.
 
 ---
 
-#### Equipe de desenvolvimento 
+## Equipe de desenvolvimento 
 
 [Guilherme B. de Oliveira](https://github.com/guidev1989) 
 
@@ -58,9 +53,7 @@ E entre outros.
 [Maria Eduarda Santos Dourado](https://github.com/MeDourado) 
 
 
-## Como Contribuir
 
-Se você gostaria de contribuir para este projeto, sinta-se à vontade para abrir um "fork" ou enviar um "pull request".
 
 
 
