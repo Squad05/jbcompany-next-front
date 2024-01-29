@@ -26,7 +26,7 @@ export default function FormCadastro() {
       const cadastrarUsuario = await cadastrar(nome, email, senha);
       router.push("/auth/logar");
     } catch (erro) {
-      setErrorMensagem(erro.message);
+      setErrorMensagem("Email já existente");
     }
   };
 

@@ -25,7 +25,7 @@ export default function FormLogin() {
       localStorage.setItem("token", token);
       router.push("/dashboard/home");
     } catch (erro) {
-      setErrorMensagem(erro.message);
+      setErrorMensagem("Email ou senha incorretos");
     }
   };
 
